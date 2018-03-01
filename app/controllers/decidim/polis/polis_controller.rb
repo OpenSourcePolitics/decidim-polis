@@ -16,7 +16,7 @@ module Decidim
         @moderator = moderator?
         @admin = admin?
         @langue = langue?
-        @site_id = Rails.application.config.polis['site_id']
+        @site_id = current_organization.polis_site_id
         @page_id = "#{@feature.id}#{@process}"
         # binding.pry
       end
