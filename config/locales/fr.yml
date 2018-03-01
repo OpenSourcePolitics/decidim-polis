@@ -32,3 +32,7 @@ fr:
           admin_3: Statistiques
           admin_4: Export
           admin_5: Synthèse
+    admin:
+      polis_config:
+        edit:
+          update: Mis a jour
