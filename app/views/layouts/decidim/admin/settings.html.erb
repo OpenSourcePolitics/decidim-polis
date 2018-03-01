@@ -18,7 +18,10 @@
         <%= link_to t("menu.scope_types", scope: "decidim.admin"), decidim_admin.scope_types_path %>
       </li>
       <li>
-        <%= link_to "EDIT POLIS ID", organization_polis_config_edit_path %>
+        <li <% if is_active_link?(organization_polis_config_edit_path) %> class="is-active" <% end %>>
+         <%= link_to "EDIT POLIS ID", organization_polis_config_edit_path %>
+      </li>
+       
       </li>
     </ul>
   </div>
