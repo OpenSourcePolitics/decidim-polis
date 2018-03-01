@@ -10,9 +10,6 @@
       <li <% if is_active_link?(decidim_admin.edit_organization_appearance_path) %> class="is-active" <% end %>>
         <%= link_to t("menu.appearance", scope: "decidim.admin"), decidim_admin.edit_organization_appearance_path %>
       </li>
-      <li <% if is_active_link?(decidim_admin.navbar_links_path) %> class="is-active" <% end %>>
-        <%= link_to t("menu.navbar_links", scope: "decidim.admin"), decidim_admin.navbar_links_path %>
-      </li>
 
       <li <% if is_active_link?(decidim_admin.scopes_path) %> class="is-active" <% end %>>
         <%= link_to t("menu.scopes", scope: "decidim.admin"), decidim_admin.scopes_path %>
@@ -20,10 +17,13 @@
       <li <% if is_active_link?(decidim_admin.scope_types_path) %> class="is-active" <% end %>>
         <%= link_to t("menu.scope_types", scope: "decidim.admin"), decidim_admin.scope_types_path %>
       </li>
+      <li>
+        <%= link_to "EDIT POLIS ID", organization_polis_config_edit_path %>
+      </li>
     </ul>
   </div>
 <% end %>
 
-<%= render "layouts/decidim/admin/application" do %>se
+<%= render "layouts/decidim/admin/application" do %>
   <%= yield %>
 <% end %>
