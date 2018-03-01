@@ -34,5 +34,12 @@ fr:
           admin_5: Synthèse
     admin:
       polis_config:
+        title: Configuration Pol.is
         edit:
           update: Mis a jour
+        warning: Cet identifiant vous est unique, ne le partagez pas et ne le modifiez pas.
+        reminder: Pensez à vous connecter à Pol.is pour que les liens directs vers l'interface d'administration de Pol.is fonctionnent
+  activemodel:
+    attributes:
+      organization:
+        polis_site_id: polis_site_id

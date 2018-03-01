@@ -32,3 +32,14 @@ en:
           admin_3: Statistics
           admin_4: Export
           admin_5: Summary
+    admin:
+      polis_config:
+        title: Pol.is configuration
+        edit:
+          update: Update
+        warning: This is your unique id, don't share it or change it.
+        reminder: Remember to log in to Pol.is so that the direct links to the Pol.is administration interface work.
+  activemodel:
+    attributes:
+      organization:
+        polis_site_id: polis_site_id
