@@ -4,7 +4,7 @@ The [Polis module](https://github.com/pol-is) adds the PAM data visualizations t
 ## Usage
 Add this line to your application's Gemfile:
 ```
-gem decidim-polis
+gem "decidim-polis", git: "https://github.com/OpenSourcePolitics/decidim-polis"
 ```
 And then execute:
 ```
