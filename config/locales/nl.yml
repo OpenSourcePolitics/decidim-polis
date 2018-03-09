@@ -39,7 +39,7 @@ nl:
       polis_config:
         title: Configuratie Pol.is
         edit:
-          update: Update
+          update: Bijwerken
         warning: Deze identificatiecode is uniek voor u, niet delen of wijzigen.
         reminder: Vergeet niet om in te loggen bij Pol.is zo dat de directe links naar de Pol. is administratie interface werk.
   activemodel:
