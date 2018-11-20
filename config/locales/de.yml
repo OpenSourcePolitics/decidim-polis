@@ -1,0 +1,46 @@
+---
+de:
+  decidim:
+    features:
+      polis:
+        name: Pol.is Gespräch
+        settings:
+          global:
+            title: Titel
+            description: Beschreibung
+            visualization: Anzeige deaktivieren (wenn Sie diesen Parameter beim Erstellen Ihres Gesprächs ankreuzen, lässt er sich später nicht mehr ändern. Um ihn dennoch zu modifizieren, müssen Sie in die Administrationsschnittstelle von Pol.is gehen).
+            sign_in_social: Verbindung über die sozialen Netzwerke aktivieren (wenn Sie diesen Parameter beim Erstellen Ihres Gesprächs ankreuzen, lässt er sich später nicht mehr ändern. Um ihn dennoch zu modifizieren, müssen Sie in die Administrationsschnittstelle von Pol.is gehen).
+          step:
+            user_can_write: Kommentare aktivieren
+            user_can_vote: Abstimmungen aktivieren
+        views:
+          titre_message: An der Debatte teilnehmen
+          texte_message_1: Um sich an der Debatte zu beteiligen,
+          lien_message_1: müssen Sie sich mit Ihrem Konto anmelden
+          texte_message_2: oder
+          lien_message_2: sich registrieren
+          titre_help_1: Wie funktioniert es?
+          titre_help_2: Herzlich Willkommen bei einem neuen Diskussionstyp.
+          help_1: Stimmen Sie über die Meinungen anderer ab.
+          help_2: Äußern Sie Ihre Meinung.
+          help_3: Ab 7 Wählern können Sie beobachten, wie sich Meinungsgruppen bilden.
+          help_4: Versuchen Sie, einen Konsens zu finden, indem Sie neue Ansichten vorschlagen (die Meinungsgruppen entwickeln sich in Echtzeit).
+          moder: "Moderation"
+          donnée: "Daten"
+          admin_1: Kommentare
+          admin_2: Teilnehmer
+          admin_3: Statistiken
+          admin_4: Export
+          admin_5: Zusammenfassung
+    admin:
+      polis_config:
+        title: Pol.is-Konfiguration
+        edit:
+          update: Aktualisierung
+        warning: Diese ID ist für Sie persönlich bestimmt, geben Sie sie nicht weiter und ändern Sie sie nicht.
+        reminder: Denken Sie daran, sich bei Pol.is anzumelden, damit die direkten Links zur Administrationsschnittstelle von Pol.is funktionieren.
+  activemodel:
+    attributes:
+      organization:
+        polis_site_id: polis_site_id
+
