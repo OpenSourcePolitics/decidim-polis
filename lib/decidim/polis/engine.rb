@@ -1,9 +1,11 @@
 # frozen_string_literal: true
-# require "jquery-rails"
+
+require "rails"
+require "decidim/core"
 
 module Decidim
   module Polis
-    # This is the engine that runs on the public interface of `decidim-polis`.
+    # This is the engine that runs on the public interface of polis.
     class Engine < ::Rails::Engine
       isolate_namespace Decidim::Polis
 
@@ -13,7 +15,7 @@ module Decidim
       end
 
       initializer "decidim_polis.assets" do |app|
-        app.config.assets.precompile += %w(decidim_polis_manifest.js6 decidim_polis_manifest.css)
+        app.config.assets.precompile += %w[decidim_polis_manifest.js decidim_polis_manifest.css]
       end
     end
   end
