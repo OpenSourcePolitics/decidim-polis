@@ -1,5 +1,10 @@
-base_locale: fr
+---
+
+base_locale: en
 locales: [ca,es,fr,en]
+
 ignore_unused:
-- "decidim.features.polis.name"
-- "decidim.polis.*"
+  - "decidim.components.polis.name"
+
+ignore_missing:
+  - decidim.participatory_processes.scopes.global
