@@ -1,7 +1,6 @@
 <%= decidim_form_for(@form, html: { class: "form edit_polis_config" }, url: decidim_admin_polis.organization_configuration_update_path, method: :put) do |f| %>
-  <%= render partial: 'form', object: f %>
+  <%= render partial: "form", object: f %>
   <div class="button--double form-general-submit">
     <%= f.submit t(".update") %>
   </div>
 <% end %>
-
