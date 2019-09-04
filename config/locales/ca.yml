@@ -23,6 +23,15 @@ ca:
     components:
       polis:
         name: Pol.is debate
+        settings:
+          global:
+            description: Description
+            social_sign_in_enabled: Social sign in enabled
+            title: Title
+            visualization_enabled: Visualization enabled
+          step:
+            vote_enabled: Vote enabled
+            write_enabled: Write enabled
         views:
           moder: 'Moderation:'
     polis:

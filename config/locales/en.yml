@@ -22,6 +22,15 @@ en:
         warning: This is your unique id, don't share it or change it.
     components:
       polis:
+        settings:
+          step:
+            write_enabled: Write enabled
+            vote_enabled: Vote enabled
+          global:
+            title: Title
+            description: Description
+            social_sign_in_enabled: Social sign in enabled
+            visualization_enabled: Visualization enabled
         name: Pol.is debate
         views:
           moder: 'Moderation:'
