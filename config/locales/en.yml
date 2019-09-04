@@ -6,6 +6,22 @@ en:
         polis_site_id: polis_site_id
   decidim:
     admin:
+      actions:
+        configure: Configure
+        destroy: Destroy
+        manage: Manage
+        permissions: Permissions
+        publish: Publish
+        unpublish: Unpublish
+      menu:
+        appearance: Appearance
+        configuration: Configuration
+        scope_types: Scope types
+        scopes: Scopes
+      organization:
+        update:
+          error: Error
+          success: Success
       polis_config:
         edit:
           update: Update
@@ -13,7 +29,7 @@ en:
           administration interface work.
         title: Pol.is configuration
         warning: This is your unique id, don't share it or change it.
-    features:
+    components:
       polis:
         name: Pol.is debate
         settings:
@@ -49,3 +65,9 @@ en:
           titre_help_1: How does it works ?
           titre_help_2: Welcome to a new type of discussion.
           titre_message: Participate in the debate
+  layouts:
+    decidim:
+      admin:
+        settings:
+          title: Title
+

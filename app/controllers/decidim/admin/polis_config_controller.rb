@@ -6,18 +6,18 @@ module Decidim
       layout "decidim/admin/settings"
 
       def hello
-        authorize! :update, current_organization
+        enforce_permission_to :update, :organization, organization: current_organization
         render plain: "OK"
       end
 
       def edit
-        authorize! :update, current_organization
+        enforce_permission_to :update, :organization, organization: current_organization
         @form = form(PolisConfigForm).from_model(current_organization)
         
       end
 
       def update
-        authorize! :update, current_organization
+        enforce_permission_to :update, :organization, organization: current_organization
         @form = form(PolisConfigForm).from_params(params)
 
         UpdateOrganizationPolisConfig.call(current_organization, @form) do

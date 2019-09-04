@@ -6,6 +6,22 @@ fr:
         polis_site_id: polis_site_id
   decidim:
     admin:
+      actions:
+        configure: Configure
+        destroy: Destroy
+        manage: Manage
+        permissions: Permissions
+        publish: Publish
+        unpublish: Unpublish
+      menu:
+        appearance: Appearance
+        configuration: Configuration
+        scope_types: Scope types
+        scopes: Scopes
+      organization:
+        update:
+          error: Error
+          success: Success
       polis_config:
         edit:
           update: Mis a jour
@@ -53,3 +69,8 @@ fr:
           titre_help_1: Comment ça marche ?
           titre_help_2: Bienvenue sur un nouveau type de discussion.
           titre_message: Participer au débat
+  layouts:
+    decidim:
+      admin:
+        settings:
+          title: Title

@@ -5,7 +5,7 @@ module Decidim
     # Exposes the polis resource so users can view them
     class PolisController < Decidim::Polis::ApplicationController
       def show
-        @feature = Feature.find(params[:feature_id])
+        @feature = Component.find(params[:component_id])
         @process = params[:participatory_process_slug]
         @settings = @feature.settings
         step_settings = @feature.step_settings
