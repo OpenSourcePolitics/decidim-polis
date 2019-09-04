@@ -1,21 +1,14 @@
 ---
 es:
-  activemodel:
-    attributes:
-      organization:
-        polis_site_id: polis_site_id
   decidim:
     admin:
-      actions:
-        configure: Configure
-        destroy: Destroy
-        manage: Manage
-        permissions: Permissions
-        publish: Publish
-        unpublish: Unpublish
       menu:
         appearance: Appearance
+        area_types: Area types
+        areas: Areas
         configuration: Configuration
+        help_sections: Help sections
+        homepage: Homepage
         scope_types: Scope types
         scopes: Scopes
       organization:
@@ -23,48 +16,38 @@ es:
           error: Error
           success: Success
       polis_config:
-        edit:
-          update: Update
         reminder: Remember to log in to Pol.is so that the direct links to the Pol.is
           administration interface work.
         title: Pol.is configuration
         warning: This is your unique id, don't share it or change it.
-    features:
+    components:
       polis:
         name: Pol.is debate
-        settings:
-          global:
-            description: Description
-            sign_in_social: Active la conexión a través de las redes sociales (si
-              marca este parámetro al crear su conversación, no será modificable a
-              partir de entonces. Para cambiarlo tendrá que ir al administrador Pol.is)
-            title: Título
-            visualization: Deshabilite la visualización (si marca este parámetro durante
-              la creación de su conversación, no será modificable más adelante). Para
-              cambiarlo debe dirigirse al administrador Pol.is)
-          step:
-            user_can_vote: Habilitar votos
-            user_can_write: Habilitar comentarios
         views:
-          admin_1: Comentarios
-          admin_2: Participantes
-          admin_3: Estadísticas
-          admin_4: Exportar
-          admin_5: Resumen
-          data: 'Datos:'
-          help_1: Vote por las opiniones de los demás.
-          help_2: Expresa tuyo
-          help_3: De 7 votantes puedes observar grupos de formación de opinión.
-          help_4: Trate de generar consenso proponiendo nuevos puntos de vista (los
-            grupos de opinión evolucionan en tiempo real).
-          lien_message_1: inicia sesión con tu cuenta
-          lien_message_2: registro
-          moder: 'Moderación:'
-          texte_message_1: Para participar en el debate
-          texte_message_2: o
-          titre_help_1: Cómo funciona ?
-          titre_help_2: Bienvenido a un nuevo tipo de discusión.
-          titre_message: Participa en el debate
+          admin_1: Comments
+          admin_2: Participants
+          admin_3: Statistics
+          admin_4: Export
+          admin_5: Summary
+          data: 'Data:'
+          help_1: Vote on the opinions of others.
+          help_2: Express yours
+          help_3: From 7 voters you can observe groups of opinion forming.
+          help_4: Try to bring consensus by proposing new points of view (The opinion
+            groups evolve in real time).
+          lien_message_1: login with your account
+          lien_message_2: register
+          moder: 'Moderation:'
+          texte_message_1: To participate in the debate
+          texte_message_2: or
+          titre_help_1: How does it works ?
+          titre_help_2: Welcome to a new type of discussion.
+          titre_message: Participate in the debate
+    polis:
+      admin:
+        configuration:
+          edit:
+            update: Update
   layouts:
     decidim:
       admin:

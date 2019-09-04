@@ -1,21 +1,14 @@
 ---
 en:
-  activemodel:
-    attributes:
-      organization:
-        polis_site_id: polis_site_id
   decidim:
     admin:
-      actions:
-        configure: Configure
-        destroy: Destroy
-        manage: Manage
-        permissions: Permissions
-        publish: Publish
-        unpublish: Unpublish
       menu:
         appearance: Appearance
+        area_types: Area types
+        areas: Areas
         configuration: Configuration
+        help_sections: Help sections
+        homepage: Homepage
         scope_types: Scope types
         scopes: Scopes
       organization:
@@ -23,8 +16,6 @@ en:
           error: Error
           success: Success
       polis_config:
-        edit:
-          update: Update
         reminder: Remember to log in to Pol.is so that the direct links to the Pol.is
           administration interface work.
         title: Pol.is configuration
@@ -32,19 +23,6 @@ en:
     components:
       polis:
         name: Pol.is debate
-        settings:
-          global:
-            description: Description
-            sign_in_social: Activate the connection via social networks (if you check
-              this parameter when creating your conversation, it will not be modifiable
-              thereafter. To change it you will have to go in the Pol.is admin)
-            title: Title
-            visualization: Disable visualization (if you check this parameter during
-              the creation of your conversation, it will not be modifiable later.To
-              change it you must go to the Pol.is admin)
-          step:
-            user_can_vote: Enable votes
-            user_can_write: Enable comments
         views:
           admin_1: Comments
           admin_2: Participants
@@ -65,9 +43,13 @@ en:
           titre_help_1: How does it works ?
           titre_help_2: Welcome to a new type of discussion.
           titre_message: Participate in the debate
+    polis:
+      admin:
+        configuration:
+          edit:
+            update: Update
   layouts:
     decidim:
       admin:
         settings:
           title: Title
-

@@ -1,21 +1,14 @@
 ---
 fr:
-  activemodel:
-    attributes:
-      organization:
-        polis_site_id: polis_site_id
   decidim:
     admin:
-      actions:
-        configure: Configure
-        destroy: Destroy
-        manage: Manage
-        permissions: Permissions
-        publish: Publish
-        unpublish: Unpublish
       menu:
         appearance: Appearance
+        area_types: Area types
+        areas: Areas
         configuration: Configuration
+        help_sections: Help sections
+        homepage: Homepage
         scope_types: Scope types
         scopes: Scopes
       organization:
@@ -23,52 +16,39 @@ fr:
           error: Error
           success: Success
       polis_config:
-        edit:
-          update: Mis a jour
         reminder: Pensez à vous connecter à Pol.is pour que les liens directs vers
           l'interface d'administration de Pol.is fonctionnent
         title: Configuration Pol.is
         warning: Cet identifiant vous est unique, ne le partagez pas et ne le modifiez
           pas.
-    features:
+    components:
       polis:
-        name: Conversation Pol.is
-        settings:
-          global:
-            description: Description
-            sign_in_social: Activer la connexion via les réseaux sociaux (si vous
-              cochez ce paramètre lors de la création de votre conversation, il ne
-              sera plus modifiable par la suite. Pour le modifier il faudra vous rendre
-              dans l'admin de Pol.is)
-            title: Titre
-            visualization: Désactiver la visualisation (si vous cochez ce paramètre
-              lors de la création de votre conversation, il ne sera plus modifiable
-              par la suite. Pour le modifier il faudra vous rendre dans l'admin de
-              Pol.is)
-          step:
-            user_can_vote: Activer les votes
-            user_can_write: Activer les commentaires
+        name: Pol.is debate
         views:
-          admin_1: Commentaires
+          admin_1: Comments
           admin_2: Participants
-          admin_3: Statistiques
+          admin_3: Statistics
           admin_4: Export
-          admin_5: Synthèse
-          data: 'Données :'
-          help_1: Votez sur les opinions des autres.
-          help_2: Exprimez la vôtre.
-          help_3: À partir de 7 votants vous pouvez observer des groupes d'opinion
-            se former.
-          help_4: Tentez de faire émerger un consensus en proposant de nouveaux points
-            de vue (Les groupe d'opinion évoluent en temps réel).
-          lien_message_1: connectez vous avec votre compte
-          lien_message_2: inscrivez vous
-          moder: 'Modération :'
-          texte_message_1: Pour participer au débat
-          texte_message_2: ou
-          titre_help_1: Comment ça marche ?
-          titre_help_2: Bienvenue sur un nouveau type de discussion.
-          titre_message: Participer au débat
+          admin_5: Summary
+          data: 'Data:'
+          help_1: Vote on the opinions of others.
+          help_2: Express yours
+          help_3: From 7 voters you can observe groups of opinion forming.
+          help_4: Try to bring consensus by proposing new points of view (The opinion
+            groups evolve in real time).
+          lien_message_1: login with your account
+          lien_message_2: register
+          moder: 'Moderation:'
+          texte_message_1: To participate in the debate
+          texte_message_2: or
+          titre_help_1: How does it works ?
+          titre_help_2: Welcome to a new type of discussion.
+          titre_message: Participate in the debate
+    polis:
+      admin:
+        configuration:
+          edit:
+            update: Update
   layouts:
     decidim:
       admin:

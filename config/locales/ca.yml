@@ -1,21 +1,14 @@
 ---
 ca:
-  activemodel:
-    attributes:
-      organization:
-        polis_site_id: polis_site_id
   decidim:
     admin:
-      actions:
-        configure: Configure
-        destroy: Destroy
-        manage: Manage
-        permissions: Permissions
-        publish: Publish
-        unpublish: Unpublish
       menu:
         appearance: Appearance
+        area_types: Area types
+        areas: Areas
         configuration: Configuration
+        help_sections: Help sections
+        homepage: Homepage
         scope_types: Scope types
         scopes: Scopes
       organization:
@@ -23,48 +16,38 @@ ca:
           error: Error
           success: Success
       polis_config:
-        edit:
-          update: Update
         reminder: Remember to log in to Pol.is so that the direct links to the Pol.is
           administration interface work.
         title: Pol.is configuration
         warning: This is your unique id, don't share it or change it.
-    features:
+    components:
       polis:
-        name: Conversa Pol.is
-        settings:
-          global:
-            description: descripció
-            sign_in_social: Activa la connexió a través de les xarxes socials (si
-              comprova aquest paràmetre quan crees la teva conversa, no serà modificable
-              després d'això). Per canviar-lo hauràs d'anar a l'administrador de Pol.is)
-            title: títol
-            visualization: Desactiveu la visualització (si comprova aquest paràmetre
-              durant la creació de la vostra conversa, no serà modificable més endavant.
-              Per canviar-lo, heu d'anar a l'administrador de Pol.is).
-          step:
-            user_can_vote: Activa els vots
-            user_can_write: Habilita comentaris
+        name: Pol.is debate
         views:
-          admin_1: Comentaris
-          admin_2: participants
-          admin_3: Estadístiques
-          admin_4: exportació
-          admin_5: resum
-          data: 'Dades:'
-          help_1: Vota sobre les opinions dels altres.
-          help_2: Expresseu la vostra
-          help_3: A partir de 7 votants es poden observar grups de formació d'opinions.
-          help_4: Intenta apropar consens proposant nous punts de vista (Els grups
-            d'opinió evolucionen en temps real).
-          lien_message_1: Inicieu sessió amb el vostre compte
-          lien_message_2: registreu-vos
-          moder: 'Moderació:'
-          texte_message_1: Participar en el debat
-          texte_message_2: o
-          titre_help_1: Com funciona?
-          titre_help_2: Benvingut a un nou tipus de discussió.
-          titre_message: Participa en el debat
+          admin_1: Comments
+          admin_2: Participants
+          admin_3: Statistics
+          admin_4: Export
+          admin_5: Summary
+          data: 'Data:'
+          help_1: Vote on the opinions of others.
+          help_2: Express yours
+          help_3: From 7 voters you can observe groups of opinion forming.
+          help_4: Try to bring consensus by proposing new points of view (The opinion
+            groups evolve in real time).
+          lien_message_1: login with your account
+          lien_message_2: register
+          moder: 'Moderation:'
+          texte_message_1: To participate in the debate
+          texte_message_2: or
+          titre_help_1: How does it works ?
+          titre_help_2: Welcome to a new type of discussion.
+          titre_message: Participate in the debate
+    polis:
+      admin:
+        configuration:
+          edit:
+            update: Update
   layouts:
     decidim:
       admin:

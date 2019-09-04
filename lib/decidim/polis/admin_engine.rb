@@ -12,11 +12,20 @@ module Decidim
       paths["lib/tasks"] = nil
 
       routes do
+        get "/organization/configuration/edit" => "configuration#edit"
+        put "/organization/configuration/update" => "configuration#update"
+
         resources :polis do
           resources :attachments
         end
 
-        root to: redirect('../edit')
+        root to: redirect("../edit")
+      end
+
+      initializer "decidim_polus.admin_mount_routes" do
+        Decidim::Core::Engine.routes do
+          mount Decidim::Polis::AdminEngine, at: "/admin", as: "decidim_admin_polis"
+        end
       end
 
       def load_seed

@@ -9,6 +9,7 @@ gem "decidim-polis", path: "."
 
 gem "puma", "~> 3.0"
 gem "uglifier", "~> 4.1"
+
 gem "bootsnap"
 
 group :development, :test do
