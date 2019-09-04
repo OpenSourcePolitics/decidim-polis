@@ -11,12 +11,12 @@ Decidim.register_component(:polis) do |component|
   component.settings(:global) do |settings|
     settings.attribute :title, type: :text, translated: true
     settings.attribute :description, type: :text, editor: true, translated: true
-    settings.attribute :sign_in_social, type: :boolean, default: false
-    settings.attribute :visualization, type: :boolean, default: false
+    settings.attribute :social_sign_in_enabled, type: :boolean, default: false
+    settings.attribute :visualization_enabled, type: :boolean, default: false
   end
 
   component.settings(:step) do |settings|
-    settings.attribute :user_can_write, type: :boolean, default: false
-    settings.attribute :user_can_vote, type: :boolean, default: false
+    settings.attribute :write_enabled, type: :boolean, default: false
+    settings.attribute :vote_enabled, type: :boolean, default: false
   end
 end

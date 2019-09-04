@@ -1,6 +1,6 @@
 <div class="row">
   <div class="columns smallmedium-12 mediumlarge-8">
-    <% if (@moderator || @admin) %>
+    <% if has_access? %>
       <!-- pol.is admin buttons section -->
       <div class="container links-container row" style="margin-left: 0px; margin-right: 0px;">
         <div class="columns mediumlarge-2 flex mgn">
@@ -29,9 +29,9 @@
     <div class="section">
       <div>
         <h2>
-          <%= translated_attribute @settings.title %>
+          <%= translated_attribute component_settings.title %>
         </h2>
-        <p><%= translated_attribute(@settings.description).html_safe %></p>
+        <p><%= translated_attribute(component_settings.description).html_safe %></p>
       </div>
     </div>
     <!-- end -->
@@ -40,21 +40,21 @@
       <% if user_signed_in? %>
         <div
           class='polis column'
-          data-page_id="<%= @page_id %>"
-          data-site_id="<%= @site_id %>"
-          data-ucw="<%= @ucw %>"
-          data-ucv="<%= @ucv %>"
-          data-show_vis="<%= @show_vis %>"
+          data-page_id="<%= page_id %>"
+          data-site_id="<%= site_id %>"
+          data-ucw="<%= current_settings.write_enabled %>"
+          data-ucv="<%= current_settings.vote_enabled %>"
+          data-show_vis="<%= component_settings.visualization_enabled %>"
           data-border="none"
-          data-topic="<%= translated_attribute @settings.title %>"
+          data-topic="<%= translated_attribute component_settings.title %>"
           data-ucst="false"
-          data-auth_opt_allow_3rdparty="<%= @sign_in_social %>"
-          data-auth_opt_fb="<%= @sign_in_social %>"
-          data-auth_opt_tw="<%= @sign_in_social %>"
+          data-auth_opt_allow_3rdparty="<%= component_settings.social_sign_in_enabled %>"
+          data-auth_opt_fb="<%= component_settings.social_sign_in_enabled %>"
+          data-auth_opt_tw="<%= component_settings.social_sign_in_enabled %>"
           data-ucsh="false"
           data-ucsf="1"
-          data-ui_lang="<%= @langue %>"
-          data-auth_needed_to_write="<%= @sign_in_social %>"
+          data-ui_lang="<%= locale %>"
+          data-auth_needed_to_write="<%= component_settings.social_sign_in_enabled %>"
           data-xid="<%= current_user.id %>"
           data-x_name="<%= current_user.name %>"
           data-x_profile_image_url="https://<%= current_organization.host %><%= current_user.avatar %>"
@@ -75,15 +75,15 @@
 
         <div
           class="polis"
-          data-page_id="<%= @page_id %>"
-          data-site_id="<%= @site_id %>"
+          data-page_id="<%= page_id %>"
+          data-site_id="<%= site_id %>"
           data-ucw="false"
           data-ucv="false"
           data-ucst="false"
           data-show_vis="true"
           data-ucsv="true"
           data-ucsf="1"
-          data-ui_lang="<%= @langue %>"
+          data-ui_lang="<%= locale %>"
           style="padding-left:0px;padding-right:0px;"></div>
         <script async='true' src='https://pol.is/embed.js'></script>
       <% end %>
