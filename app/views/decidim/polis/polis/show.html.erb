@@ -16,7 +16,7 @@
         <% if @admin %>
           <div class="columns mediumlarge-5 flex">
             <p class="h-link">
-              <%= t("decidim.components.polis.views.data") %>
+              <%= t(".data") %>
             <ul class="appendAdminLink "></ul>
             </p>
           </div>
@@ -58,33 +58,34 @@
           data-xid="<%= current_user.id %>"
           data-x_name="<%= current_user.name %>"
           data-x_profile_image_url=<%= avatar_url %>
-          style="padding-left:0px;padding-right:0px;"></div>
+              style="padding-left:0px;padding-right:0px;"></div>
         <script async='true' src='https://pol.is/embed.js'></script>
       <% else %>
-
         <div class="well">
           <div class="add-comment">
-            <h5 class="section-heading"><%= t("decidim.components.polis.views.titre_message") %></h5>
-            <p><%= t("decidim.components.polis.views.texte_message_1") %>
-              <a href="/users/sign_in"><%= t("decidim.components.polis.views.lien_message_1") %></a>
-              <%= t("decidim.components.polis.views.texte_message_2") %>
-              <a href="/users/sign_up"><%= t("decidim.components.polis.views.lien_message_2") %></a>
+            <h5 class="section-heading"><%= t(".login_title") %></h5>
+            <p><%= t(".login_instructions") %>
+              <% if current_organization.sign_up_enabled? %>
+                <%= link_to t("layouts.decidim.header.sign_up"), decidim.new_user_registration_path, class: "sign-up-link" %>
+                <%= t(".or") %>
+              <% end %>
+              <%= link_to t("layouts.decidim.header.sign_in"), decidim.new_user_session_path, class: "sign-in-link" %>
+
             </p>
           </div>
         </div>
 
-        <div
-          class="polis"
-          data-page_id="<%= page_id %>"
-          data-site_id="<%= site_id %>"
-          data-ucw="false"
-          data-ucv="false"
-          data-ucst="false"
-          data-show_vis="true"
-          data-ucsv="true"
-          data-ucsf="1"
-          data-ui_lang="<%= locale %>"
-          style="padding-left:0px;padding-right:0px;"></div>
+        <div class="polis"
+             data-page_id="<%= page_id %>"
+             data-site_id="<%= site_id %>"
+             data-ucw="false"
+             data-ucv="false"
+             data-ucst="false"
+             data-show_vis="true"
+             data-ucsv="true"
+             data-ucsf="1"
+             data-ui_lang="<%= locale %>"
+             style="padding-left:0px;padding-right:0px;"></div>
         <script async='true' src='https://pol.is/embed.js'></script>
       <% end %>
     </div>
@@ -95,12 +96,12 @@
     <div class="block-right">
       <br>
       <center>
-        <%= image_tag "decidim/polis/question-circle", alt: "image bleue", width: 80, height: 30 %>
+        <%= image_tag "decidim/polis/question-circle", alt: t(".question_circle_alt"), width: 80, height: 30 %>
         <h2>
-          <b><%= t("decidim.components.polis.views.titre_help_1") %></b>
+          <b><%= t(".help.top") %></b>
         </h2>
         <h5>
-          <b><%= t("decidim.components.polis.views.titre_help_2") %></b>
+          <b><%= t(".help.bottom") %></b>
         </h5>
       </center>
     </div>
@@ -113,7 +114,7 @@
             <b style="color: white">1</b>
           </div>
           <div class="timeline__info">
-            <div class="timeline__content"><%= t("decidim.components.polis.views.help_1") %></div>
+            <div class="timeline__content"><%= t(".help.description_1") %></div>
           </div>
         </li>
         <li class="timeline__item">
@@ -121,7 +122,7 @@
             <b style="color: white">2</b>
           </div>
           <div class="timeline__info">
-            <div class="timeline__content"><%= t("decidim.components.polis.views.help_2") %></div>
+            <div class="timeline__content"><%= t(".help.description_2") %></div>
           </div>
         </li>
         <li class="timeline__item">
@@ -129,7 +130,7 @@
             <b style="color: white">3</b>
           </div>
           <div class="timeline__info">
-            <div class="timeline__content"><%= t("decidim.components.polis.views.help_3") %></div>
+            <div class="timeline__content"><%= t(".help.description_3") %></div>
           </div>
         </li>
         <li class="timeline__item">
@@ -137,7 +138,7 @@
             <b style="color: white">4</b>
           </div>
           <div class="timeline__info">
-            <div class="timeline__content"><%= t("decidim.components.polis.views.help_4") %></div>
+            <div class="timeline__content"><%= t(".help.description_4") %></div>
           </div>
         </li>
       </ol>
@@ -159,11 +160,11 @@
     }
 
     function completeUrl(conversation_id) {
-        $('.appendModerateLink').append('<li><a class="btn admin-btn" target="blank" href="https://pol.is/m/' + conversation_id + '/comments"> <%= t("decidim.components.polis.views.admin_1") %> </a></li>')
-        $('.appendModerateLink').append('<li><a class="btn admin-btn" target="blank" href="https://pol.is/m/' + conversation_id + '/participants"> <%= t("decidim.components.polis.views.admin_2") %> </a></li>')
-        $('.appendAdminLink').append('<li><a class="btn admin-btn" target="blank" href="https://pol.is/m/' + conversation_id + '/stats"> <%= t("decidim.components.polis.views.admin_3") %> </a></li>')
-        $('.appendAdminLink').append('<li><a class="btn admin-btn" target="blank" href="https://pol.is/m/' + conversation_id + '/export"> <%= t("decidim.components.polis.views.admin_4") %> </a></li>')
-        $('.appendAdminLink').append('<li><a class="btn admin-btn" target="blank" href="https://pol.is/m/' + conversation_id + '/reports"> <%= t("decidim.components.polis.views.admin_5") %> </a> </li>')
+        $('.appendModerateLink').append('<li><a class="btn admin-btn" target="blank" href="https://pol.is/m/' + conversation_id + '/comments"> <%= t(".moderation.link_1") %> </a></li>')
+        $('.appendModerateLink').append('<li><a class="btn admin-btn" target="blank" href="https://pol.is/m/' + conversation_id + '/participants"> <%= t(".moderation.link_2") %> </a></li>')
+        $('.appendAdminLink').append('<li><a class="btn admin-btn" target="blank" href="https://pol.is/m/' + conversation_id + '/stats"> <%= t(".moderation.link_3") %> </a></li>')
+        $('.appendAdminLink').append('<li><a class="btn admin-btn" target="blank" href="https://pol.is/m/' + conversation_id + '/export"> <%= t(".moderation.link_4") %> </a></li>')
+        $('.appendAdminLink').append('<li><a class="btn admin-btn" target="blank" href="https://pol.is/m/' + conversation_id + '/reports"> <%= t(".moderation.link_5") %> </a> </li>')
     }
 
     getConversationId()

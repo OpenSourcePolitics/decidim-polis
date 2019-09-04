@@ -24,32 +24,37 @@ ca:
       polis:
         name: Pol.is debate
         views:
-          admin_1: Comments
-          admin_2: Participants
-          admin_3: Statistics
-          admin_4: Export
-          admin_5: Summary
-          data: 'Data:'
-          help_1: Vote on the opinions of others.
-          help_2: Express yours
-          help_3: From 7 voters you can observe groups of opinion forming.
-          help_4: Try to bring consensus by proposing new points of view (The opinion
-            groups evolve in real time).
-          lien_message_1: login with your account
-          lien_message_2: register
           moder: 'Moderation:'
-          texte_message_1: To participate in the debate
-          texte_message_2: or
-          titre_help_1: How does it works ?
-          titre_help_2: Welcome to a new type of discussion.
-          titre_message: Participate in the debate
     polis:
       admin:
         configuration:
           edit:
             update: Update
+      polis:
+        show:
+          data: Data
+          help:
+            bottom: Bottom
+            description_1: Description 1
+            description_2: Description 2
+            description_3: Description 3
+            description_4: Description 4
+            top: Top
+          login_instructions: Login instructions
+          login_title: Login title
+          moderation:
+            link_1: Link 1
+            link_2: Link 2
+            link_3: Link 3
+            link_4: Link 4
+            link_5: Link 5
+          or: Or
+          question_circle_alt: Question circle alt
   layouts:
     decidim:
       admin:
         settings:
           title: Title
+      header:
+        sign_in: Sign in
+        sign_up: Sign up
