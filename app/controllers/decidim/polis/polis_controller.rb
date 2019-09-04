@@ -6,7 +6,7 @@ module Decidim
     class PolisController < Decidim::Polis::ApplicationController
       helper_method :has_access?, :page_id, :site_id
 
-      def show; end
+      def show ;end
 
       private
 

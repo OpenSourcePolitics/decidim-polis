@@ -57,7 +57,7 @@
           data-auth_needed_to_write="<%= component_settings.social_sign_in_enabled? %>"
           data-xid="<%= current_user.id %>"
           data-x_name="<%= current_user.name %>"
-          data-x_profile_image_url="https://<%= current_organization.host %><%= current_user.avatar %>"
+          data-x_profile_image_url=<%= avatar_url %>
           style="padding-left:0px;padding-right:0px;"></div>
         <script async='true' src='https://pol.is/embed.js'></script>
       <% else %>
@@ -95,7 +95,7 @@
     <div class="block-right">
       <br>
       <center>
-        <%= icon "question-mark", alt: "image bleue", width: 80, height: 30 %>
+        <%= image_tag "decidim/polis/question-circle", alt: "image bleue", width: 80, height: 30 %>
         <h2>
           <b><%= t("decidim.components.polis.views.titre_help_1") %></b>
         </h2>
