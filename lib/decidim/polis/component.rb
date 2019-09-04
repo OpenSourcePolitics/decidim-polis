@@ -7,6 +7,7 @@ Decidim.register_component(:polis) do |component|
   component.admin_engine = Decidim::Polis::AdminEngine
   component.icon = "decidim/polis/icon.svg"
   component.stylesheet = "decidim/polis/polis"
+  component.permissions_class_name = "Decidim::Polis::Permissions"
 
   component.settings(:global) do |settings|
     settings.attribute :title, type: :text, translated: true

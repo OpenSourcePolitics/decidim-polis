@@ -1,6 +1,6 @@
 <div class="row">
   <div class="columns smallmedium-12 mediumlarge-8">
-    <% if has_access? %>
+    <% if allowed_to? :manage, :polis %>
       <!-- pol.is admin buttons section -->
       <div class="container links-container row" style="margin-left: 0px; margin-right: 0px;">
         <div class="columns mediumlarge-2 flex mgn">
