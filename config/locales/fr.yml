@@ -41,27 +41,27 @@ fr:
         show:
           data: Données
           help:
-            bottom: Bottom
-            description_1: Description 1
-            description_2: Description 2
-            description_3: Description 3
-            description_4: Description 4
-            top: Top
-          login_instructions: Login instructions
-          login_title: Login title
+            bottom: Bienvenue sur un nouveau type de discussion
+            description_1: Votez sur les opinions des autres.
+            description_2: Exprimez la vôtre.
+            description_3: À partir de 7 votants vous pouvez observer des groupes d'opinion se former.
+            description_4: Tentez de faire émerger un consensus en proposant de nouveaux points de vue (Les groupe d'opinion évoluent en temps réel).
+            top: Comment ça marche ?
+          login_instructions: connectez vous avec votre compte
+          login_title: Participer Au Débat
           moderation:
-            link_1: Link 1
-            link_2: Link 2
-            link_3: Link 3
-            link_4: Link 4
-            link_5: Link 5
-          or: Or
-          question_circle_alt: Question circle alt
+            link_1: Lien 1
+            link_2: Lien 2
+            link_3: Lien 3
+            link_4: Lien 4
+            link_5: Lien 5
+          or: ou
+          question_circle_alt: Alt du cercle des questions
   layouts:
     decidim:
       admin:
         settings:
-          title: Title
+          title: Titre
       header:
-        sign_in: Sign in
-        sign_up: Sign up
+        sign_in: connectez vous avec votre compte
+        sign_up: inscrivez vous
