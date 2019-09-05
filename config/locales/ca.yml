@@ -1,4 +1,3 @@
----
 ca:
   decidim:
     admin:
@@ -16,22 +15,21 @@ ca:
           error: Error
           success: Success
       polis_config:
-        reminder: Remember to log in to Pol.is so that the direct links to the Pol.is
-          administration interface work.
+        reminder: Remember to log in to Pol.is so that the direct links to the Pol.is administration interface work.
         title: Pol.is configuration
         warning: This is your unique id, don't share it or change it.
     components:
       polis:
-        name: Pol.is debate
         settings:
+          step:
+            write_enabled: Write enabled
+            vote_enabled: Vote enabled
           global:
+            title: Title
             description: Description
             social_sign_in_enabled: Social sign in enabled
-            title: Title
             visualization_enabled: Visualization enabled
-          step:
-            vote_enabled: Vote enabled
-            write_enabled: Write enabled
+        name: Pol.is debate
         views:
           moder: 'Moderation:'
     polis:
