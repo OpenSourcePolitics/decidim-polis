@@ -2,18 +2,18 @@ fr:
   decidim:
     admin:
       menu:
-        appearance: Appearance
-        area_types: Area types
-        areas: Areas
+        appearance: Apparence
+        area_types: Types de périmètre d'assemblée
+        areas: Périmètres d'assemblée
         configuration: Configuration
-        help_sections: Help sections
-        homepage: Homepage
-        scope_types: Scope types
-        scopes: Scopes
+        help_sections: Messages d'aide contextuels
+        homepage: Page d'accueil
+        scope_types: Types de périmètre d'application
+        scopes: Secteurs
       organization:
         update:
-          error: Error
-          success: Success
+          error: Erreur
+          success: Succès
       polis_config:
         reminder: Pensez à vous connecter à Pol.is pour que les liens directs vers l'interface d'administration de Pol.is fonctionnent
         title: Configuration Pol.is
@@ -22,46 +22,46 @@ fr:
       polis:
         settings:
           step:
-            write_enabled: Write enabled
-            vote_enabled: Vote enabled
+            write_enabled: Écriture activée
+            vote_enabled: Votes activés
           global:
-            title: Title
+            title: Titre
             description: Description
-            social_sign_in_enabled: Social sign in enabled
-            visualization_enabled: Visualization enabled
-        name: Pol.is debate
+            social_sign_in_enabled: Connexion via réseaux sociaux activée
+            visualization_enabled: Visualisation activée
+        name: Débat pol.is
         views:
-          moder: 'Moderation:'
+          moder: 'Modération:'
     polis:
       admin:
         configuration:
           edit:
-            update: Update
+            update: Mettre à jour
       polis:
         show:
-          data: Data
+          data: Données
           help:
-            bottom: Bottom
-            description_1: Description 1
-            description_2: Description 2
-            description_3: Description 3
-            description_4: Description 4
-            top: Top
-          login_instructions: Login instructions
-          login_title: Login title
+            bottom: Bienvenue sur un nouveau type de discussion
+            description_1: Votez sur les opinions des autres.
+            description_2: Exprimez la vôtre.
+            description_3: À partir de 7 votants vous pouvez observer des groupes d'opinion se former.
+            description_4: Tentez de faire émerger un consensus en proposant de nouveaux points de vue (Les groupe d'opinion évoluent en temps réel).
+            top: Comment ça marche ?
+          login_instructions: connectez vous avec votre compte
+          login_title: Participer Au Débat
           moderation:
-            link_1: Link 1
-            link_2: Link 2
-            link_3: Link 3
-            link_4: Link 4
-            link_5: Link 5
-          or: Or
-          question_circle_alt: Question circle alt
+            link_1: Lien 1
+            link_2: Lien 2
+            link_3: Lien 3
+            link_4: Lien 4
+            link_5: Lien 5
+          or: ou
+          question_circle_alt: Alt du cercle des questions
   layouts:
     decidim:
       admin:
         settings:
-          title: Title
+          title: Titre
       header:
-        sign_in: Sign in
-        sign_up: Sign up
+        sign_in: connectez vous avec votre compte
+        sign_up: inscrivez vous
