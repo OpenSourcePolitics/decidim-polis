@@ -1,46 +1,67 @@
----
 de:
   decidim:
-    features:
-      polis:
-        name: Pol.is Gespräch
-        settings:
-          global:
-            title: Titel
-            description: Beschreibung
-            visualization: Anzeige deaktivieren (wenn Sie diesen Parameter beim Erstellen Ihres Gesprächs ankreuzen, lässt er sich später nicht mehr ändern. Um ihn dennoch zu modifizieren, müssen Sie in die Administrationsschnittstelle von Pol.is gehen).
-            sign_in_social: Verbindung über die sozialen Netzwerke aktivieren (wenn Sie diesen Parameter beim Erstellen Ihres Gesprächs ankreuzen, lässt er sich später nicht mehr ändern. Um ihn dennoch zu modifizieren, müssen Sie in die Administrationsschnittstelle von Pol.is gehen).
-          step:
-            user_can_write: Kommentare aktivieren
-            user_can_vote: Abstimmungen aktivieren
-        views:
-          titre_message: An der Debatte teilnehmen
-          texte_message_1: Um sich an der Debatte zu beteiligen,
-          lien_message_1: müssen Sie sich mit Ihrem Konto anmelden
-          texte_message_2: oder
-          lien_message_2: sich registrieren
-          titre_help_1: Wie funktioniert es?
-          titre_help_2: Herzlich Willkommen bei einem neuen Diskussionstyp.
-          help_1: Stimmen Sie über die Meinungen anderer ab.
-          help_2: Äußern Sie Ihre Meinung.
-          help_3: Ab 7 Wählern können Sie beobachten, wie sich Meinungsgruppen bilden.
-          help_4: Versuchen Sie, einen Konsens zu finden, indem Sie neue Ansichten vorschlagen (die Meinungsgruppen entwickeln sich in Echtzeit).
-          moder: "Moderation"
-          data: "Daten"
-          admin_1: Kommentare
-          admin_2: Teilnehmer
-          admin_3: Statistiken
-          admin_4: Export
-          admin_5: Zusammenfassung
     admin:
-      polis_config:
-        title: Pol.is-Konfiguration
-        edit:
-          update: Aktualisierung
-        warning: Diese ID ist für Sie persönlich bestimmt, geben Sie sie nicht weiter und ändern Sie sie nicht.
-        reminder: Denken Sie daran, sich bei Pol.is anzumelden, damit die direkten Links zur Administrationsschnittstelle von Pol.is funktionieren.
-  activemodel:
-    attributes:
+      menu:
+        appearance: Appearance
+        area_types: Area types
+        areas: Areas
+        configuration: Configuration
+        help_sections: Help sections
+        homepage: Homepage
+        scope_types: Scope types
+        scopes: Scopes
       organization:
-        polis_site_id: polis_site_id
-
+        update:
+          error: Error
+          success: Success
+      polis_config:
+        reminder: Denken Sie daran, sich bei Pol.is anzumelden, damit die direkten Links zur Administrationsschnittstelle von Pol.is funktionieren.
+        title: Pol.is-Konfiguration
+        warning: Diese ID ist für Sie persönlich bestimmt, geben Sie sie nicht weiter und ändern Sie sie nicht.
+    components:
+      polis:
+        settings:
+          step:
+            write_enabled: Write enabled
+            vote_enabled: Vote enabled
+          global:
+            title: Title
+            description: Description
+            social_sign_in_enabled: Social sign in enabled
+            visualization_enabled: Visualization enabled
+        name: Pol.is debate
+        views:
+          moder: 'Moderation:'
+    polis:
+      admin:
+        configuration:
+          edit:
+            update: Update
+      polis:
+        show:
+          data: Data
+          help:
+            bottom: Bottom
+            description_1: Description 1
+            description_2: Description 2
+            description_3: Description 3
+            description_4: Description 4
+            top: Top
+          login_instructions: Login instructions
+          login_title: Login title
+          moderation:
+            link_1: Link 1
+            link_2: Link 2
+            link_3: Link 3
+            link_4: Link 4
+            link_5: Link 5
+          or: Or
+          question_circle_alt: Question circle alt
+  layouts:
+    decidim:
+      admin:
+        settings:
+          title: Title
+      header:
+        sign_in: Sign in
+        sign_up: Sign up
