@@ -2,18 +2,18 @@ fr:
   decidim:
     admin:
       menu:
-        appearance: Appearance
-        area_types: Area types
-        areas: Areas
+        appearance: Apparence
+        area_types: Types de périmètre d'assemblée
+        areas: Périmètres d'assemblée
         configuration: Configuration
-        help_sections: Help sections
-        homepage: Homepage
-        scope_types: Scope types
-        scopes: Scopes
+        help_sections: Messages d'aide contextuels
+        homepage: Page d'accueil
+        scope_types: Types de périmètre d'application
+        scopes: Secteurs
       organization:
         update:
-          error: Error
-          success: Success
+          error: Erreur
+          success: Succès
       polis_config:
         reminder: Pensez à vous connecter à Pol.is pour que les liens directs vers l'interface d'administration de Pol.is fonctionnent
         title: Configuration Pol.is
@@ -22,24 +22,24 @@ fr:
       polis:
         settings:
           step:
-            write_enabled: Write enabled
-            vote_enabled: Vote enabled
+            write_enabled: Écriture activée
+            vote_enabled: Votes activés
           global:
-            title: Title
+            title: Titre
             description: Description
-            social_sign_in_enabled: Social sign in enabled
-            visualization_enabled: Visualization enabled
-        name: Pol.is debate
+            social_sign_in_enabled: Connexion via réseaux sociaux activée
+            visualization_enabled: Visualisation activée
+        name: Débat pol.is
         views:
-          moder: 'Moderation:'
+          moder: 'Modération:'
     polis:
       admin:
         configuration:
           edit:
-            update: Update
+            update: Mettre à jour
       polis:
         show:
-          data: Data
+          data: Données
           help:
             bottom: Bottom
             description_1: Description 1
