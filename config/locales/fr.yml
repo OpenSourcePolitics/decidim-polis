@@ -57,11 +57,3 @@ fr:
             link_5: Lien 5
           or: ou
           question_circle_alt: Alt du cercle des questions
-  layouts:
-    decidim:
-      admin:
-        settings:
-          title: Titre
-      header:
-        sign_in: connectez vous avec votre compte
-        sign_up: inscrivez vous
