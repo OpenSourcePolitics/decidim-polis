@@ -50,8 +50,8 @@ ca:
           login_instructions: Login instructions
           login_title: Login title
           moderation:
-            link_1: Link 1
-            link_2: Link 2
+            link_1: Comments
+            link_2: Participants
             link_3: Link 3
             link_4: Link 4
             link_5: Link 5
