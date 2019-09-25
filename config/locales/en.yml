@@ -1,4 +1,3 @@
----
 en:
   decidim:
     admin:
@@ -16,8 +15,7 @@ en:
           error: Error
           success: Success
       polis_config:
-        reminder: Remember to log in to Pol.is so that the direct links to the Pol.is
-          administration interface work.
+        reminder: Remember to log in to Pol.is so that the direct links to the Pol.is administration interface work.
         title: Pol.is configuration
         warning: This is your unique id, don't share it or change it.
     components:
