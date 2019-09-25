@@ -56,12 +56,12 @@ es:
             link_4: Enlace 4
             link_5: Enlace 5
           or: O
-          question_circle_alt: Question circle alt
+          question_circle_alt: Alt círculo de preguntas
   layouts:
     decidim:
       admin:
         settings:
-          title: Title
+          title: Título
       header:
-        sign_in: Sign in
-        sign_up: Sign up
+        sign_in: Iniciar sesión
+        sign_up: Registrarse
