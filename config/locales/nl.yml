@@ -44,24 +44,24 @@ nl:
             bottom: Bodem
             description_1: Beschrijving 1
             description_2: Beschrijving 2
-            description_3: Description 3
-            description_4: Description 4
+            description_3: Beschrijving 3
+            description_4: Beschrijving 4
             top: Top
-          login_instructions: Login instructions
-          login_title: Login title
+          login_instructions: Inloginstructies
+          login_title: Login titel
           moderation:
-            link_1: Comments
-            link_2: Participants
+            link_1: Reacties
+            link_2: Deelnemers
             link_3: Link 3
             link_4: Link 4
             link_5: Link 5
-          or: Or
-          question_circle_alt: Question circle alt
+          or: Of
+          question_circle_alt: Vraagcirkel alt
   layouts:
     decidim:
       admin:
         settings:
-          title: Title
+          title: Titel
       header:
-        sign_in: Sign in
-        sign_up: Sign up
+        sign_in: Log in
+        sign_up: Registratie
