@@ -2,18 +2,18 @@ nl:
   decidim:
     admin:
       menu:
-        appearance: Appearance
-        area_types: Area types
-        areas: Areas
-        configuration: Configuration
-        help_sections: Help sections
-        homepage: Homepage
+        appearance: Uiterlijk
+        area_types: Gebiedstypen
+        areas: Gebieden
+        configuration: Configuratie
+        help_sections: Help secties
+        homepage: Startpagina
         scope_types: Scope types
         scopes: Scopes
       organization:
         update:
-          error: Error
-          success: Success
+          error: Fout
+          success: Succes
       polis_config:
         reminder: Vergeet niet om in te loggen bij Pol.is zo dat de directe links naar de Pol. is administratie interface werk.
         title: Configuratie Pol.is
@@ -22,14 +22,14 @@ nl:
       polis:
         settings:
           step:
-            write_enabled: Write enabled
-            vote_enabled: Vote enabled
+            write_enabled: Schrijf geactiveerd
+            vote_enabled: Stemmen geactiveerd
           global:
-            title: Title
-            description: Description
-            social_sign_in_enabled: Social sign in enabled
-            visualization_enabled: Visualization enabled
-        name: Pol.is debate
+            title: Titel
+            description: Beschrijving
+            social_sign_in_enabled: Social inloggen ingeschakeld
+            visualization_enabled: Visualisatie ingeschakeld
+        name: Pol.is debat
         views:
           moder: 'Moderation:'
     polis:
