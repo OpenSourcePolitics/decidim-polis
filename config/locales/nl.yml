@@ -41,14 +41,14 @@ nl:
         show:
           data: Data
           help:
-            bottom: Bodem
-            description_1: Beschrijving 1
-            description_2: Beschrijving 2
-            description_3: Beschrijving 3
-            description_4: Beschrijving 4
-            top: Top
-          login_instructions: Inloginstructies
-          login_title: Login titel
+            bottom: Welkom bij een nieuwe vorm van discussie
+            description_1: Stemmen over de mening van anderen
+            description_2: Geef uw mening
+            description_3: Uit 7 kiezers kunt u zien dat er meningsgroepen worden gevormd.
+            description_4: Probeer een consensus te bereiken door nieuwe standpunten voor te stellen (meningsgroepen evolueren in real time).
+            top: Hoe werkt het?
+          login_instructions: inloggen met uw account
+          login_title: Aan het debat deelnemen
           moderation:
             link_1: Reacties
             link_2: Deelnemers
