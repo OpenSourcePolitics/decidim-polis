@@ -41,14 +41,14 @@ de:
         show:
           data: Daten
           help:
-            bottom: Boden
-            description_1: Beschreibung 1
-            description_2: Beschreibung 2
-            description_3: Beschreibung 3
-            description_4: Beschreibung 4
-            top: Oben
-          login_instructions: Login-Anweisungen
-          login_title: Login-Titel
+            bottom: Willkommen zu einer neuen Art von Diskussion
+            description_1: Stimmen Sie über die Meinungen anderer ab.
+            description_2: Drück deinen aus.
+            description_3: Aus 7 Wählern kann man beobachten, wie sich Meinungsgruppen bilden.
+            description_4: Versuchen Sie, einen Konsens zu schaffen, indem Sie neue Standpunkte vorschlagen (Meinungsgruppen entwickeln sich in Echtzeit).
+            top: Wie funktioniert es?
+          login_instructions: Melden Sie sich mit Ihrem Konto an
+          login_title: An der Debatte teilnehmen
           moderation:
             link_1: Kommentare
             link_2: Teilnehmer
