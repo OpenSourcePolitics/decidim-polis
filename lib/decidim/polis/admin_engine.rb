@@ -22,7 +22,7 @@ module Decidim
         root to: redirect("../edit")
       end
 
-      initializer "decidim_polus.admin_mount_routes" do
+      initializer "decidim_polis.admin_mount_routes" do
         Decidim::Core::Engine.routes do
           mount Decidim::Polis::AdminEngine, at: "/admin", as: "decidim_admin_polis"
         end
