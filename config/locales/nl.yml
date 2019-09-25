@@ -31,19 +31,19 @@ nl:
             visualization_enabled: Visualisatie ingeschakeld
         name: Pol.is debat
         views:
-          moder: 'Moderation:'
+          moder: 'Moderatie:'
     polis:
       admin:
         configuration:
           edit:
-            update: Update
+            update: Bijwerken
       polis:
         show:
           data: Data
           help:
-            bottom: Bottom
-            description_1: Description 1
-            description_2: Description 2
+            bottom: Bodem
+            description_1: Beschrijving 1
+            description_2: Beschrijving 2
             description_3: Description 3
             description_4: Description 4
             top: Top
