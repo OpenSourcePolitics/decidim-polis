@@ -2,60 +2,60 @@ es:
   decidim:
     admin:
       menu:
-        appearance: Appearance
-        area_types: Area types
-        areas: Areas
-        configuration: Configuration
-        help_sections: Help sections
-        homepage: Homepage
-        scope_types: Scope types
-        scopes: Scopes
+        appearance: Apariencia
+        area_types: Tipos de perímetro
+        areas: Perímetros
+        configuration: Configuración
+        help_sections: Secciones de ayuda
+        homepage: Página Principal
+        scope_types: Tipos de ámbito
+        scopes: Ámbitos
       organization:
         update:
           error: Error
-          success: Success
+          success: Éxito
       polis_config:
-        reminder: Remember to log in to Pol.is so that the direct links to the Pol.is administration interface work.
-        title: Pol.is configuration
-        warning: This is your unique id, don't share it or change it.
+        reminder: Recuerde iniciar sesión en Pol.is para que los enlaces directos al interfaz de administración Pol.is funcionen.
+        title: Configuración de Pol.is
+        warning: Este es tu id único, no lo compartes ni lo cambies.
     components:
       polis:
         settings:
           step:
-            write_enabled: Write enabled
-            vote_enabled: Vote enabled
+            write_enabled: Escritura habilitada
+            vote_enabled: Votos habilitados
           global:
-            title: Title
-            description: Description
-            social_sign_in_enabled: Social sign in enabled
-            visualization_enabled: Visualization enabled
+            title: Título
+            description: Descripción
+            social_sign_in_enabled: Registro social activado
+            visualization_enabled: Visualización activada
         name: Pol.is debate
         views:
-          moder: 'Moderation:'
+          moder: 'Moderación:'
     polis:
       admin:
         configuration:
           edit:
-            update: Update
+            update: Actualizar
       polis:
         show:
-          data: Data
+          data: Datos
           help:
-            bottom: Bottom
-            description_1: Description 1
-            description_2: Description 2
-            description_3: Description 3
-            description_4: Description 4
-            top: Top
-          login_instructions: Login instructions
-          login_title: Login title
+            bottom: Bienvenidos a un nuevo tipo de discusión
+            description_1: Vota sobre las opiniones de los demás.
+            description_2: Exprese la suya.
+            description_3: A partir de 7 votantes se puede observar la formación de grupos de opinión.
+            description_4: Intenta construir consenso proponiendo nuevos puntos de vista (los grupos de opinión evolucionan en tiempo real).
+            top: '¿cómo funciona?'
+          login_instructions: Inicia sesión con tu cuenta
+          login_title: Participa en el debate
           moderation:
-            link_1: Comments
-            link_2: Participants
-            link_3: Link 3
-            link_4: Link 4
-            link_5: Link 5
-          or: Or
+            link_1: Comentarios
+            link_2: Participantes
+            link_3: Enlace 3
+            link_4: Enlace 4
+            link_5: Enlace 5
+          or: O
           question_circle_alt: Question circle alt
   layouts:
     decidim:
