@@ -8,7 +8,7 @@ fr:
         configuration: Configuration
         help_sections: Messages d'aide contextuels
         homepage: Page d'accueil
-        scope_types: Types de périmètre d'application
+        scope_types: Types de secteurs
         scopes: Secteurs
       organization:
         update:
@@ -23,7 +23,7 @@ fr:
         settings:
           step:
             write_enabled: Écriture activée
-            vote_enabled: Votes activés
+            vote_enabled: Vote activé
           global:
             title: Titre
             description: Description
@@ -50,7 +50,7 @@ fr:
           login_instructions: connectez vous avec votre compte
           login_title: Participer Au Débat
           moderation:
-            link_1: Comments
+            link_1: Commentaires
             link_2: Participants
             link_3: Lien 3
             link_4: Lien 4
