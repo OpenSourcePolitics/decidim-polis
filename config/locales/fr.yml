@@ -41,14 +41,14 @@ fr:
         show:
           data: Données
           help:
-            bottom: Bienvenue sur un nouveau type de discussion
-            description_1: Votez sur les opinions des autres.
-            description_2: Exprimez la vôtre.
-            description_3: À partir de 7 votants vous pouvez observer des groupes d'opinion se former.
-            description_4: Tentez de faire émerger un consensus en proposant de nouveaux points de vue (Les groupe d'opinion évoluent en temps réel).
-            top: Comment ça marche ?
-          login_instructions: connectez vous avec votre compte
-          login_title: Participer Au Débat
+            bottom: Welcome to a new type of discussion
+            description_1: Vote on the opinions of others
+            description_2: Express your opinion
+            description_3: Above seven voters, you can see opinion groups forming
+            description_4: Try to create a consensus by offering new points of view (Opinion groups are changing real time)
+            top: How does this work ?
+          login_instructions: Login with your account
+          login_title: Contribute to the debate
           moderation:
             link_1: Commentaires
             link_2: Participants
