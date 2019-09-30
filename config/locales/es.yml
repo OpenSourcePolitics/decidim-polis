@@ -41,14 +41,14 @@ es:
         show:
           data: Datos
           help:
-            bottom: Bienvenidos a un nuevo tipo de discusión
-            description_1: Vota sobre las opiniones de los demás.
-            description_2: Exprese la suya.
-            description_3: A partir de 7 votantes se puede observar la formación de grupos de opinión.
-            description_4: Intenta construir consenso proponiendo nuevos puntos de vista (los grupos de opinión evolucionan en tiempo real).
-            top: '¿cómo funciona?'
-          login_instructions: Inicia sesión con tu cuenta
-          login_title: Participa en el debate
+            bottom: Welcome to a new type of discussion
+            description_1: Vote on the opinions of others
+            description_2: Express your opinion
+            description_3: Above seven voters, you can see opinion groups forming
+            description_4: Try to create a consensus by offering new points of view (Opinion groups are changing real time)
+            top: How does this work ?
+          login_instructions: Login with your account
+          login_title: Contribute to the debate
           moderation:
             link_1: Comentarios
             link_2: Participantes
