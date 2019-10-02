@@ -41,14 +41,14 @@ nl:
         show:
           data: Data
           help:
-            bottom: Welkom bij een nieuwe vorm van discussie
-            description_1: Stemmen over de mening van anderen
-            description_2: Geef uw mening
-            description_3: Uit 7 kiezers kunt u zien dat er meningsgroepen worden gevormd.
-            description_4: Probeer een consensus te bereiken door nieuwe standpunten voor te stellen (meningsgroepen evolueren in real time).
-            top: Hoe werkt het?
-          login_instructions: inloggen met uw account
-          login_title: Aan het debat deelnemen
+            bottom: Welcome to a new type of discussion
+            description_1: Vote on the opinions of others
+            description_2: Express your opinion
+            description_3: Above seven voters, you can see opinion groups forming
+            description_4: Try to create a consensus by offering new points of view (Opinion groups are changing real time)
+            top: How does this work ?
+          login_instructions: Login with your account
+          login_title: Contribute to the debate
           moderation:
             link_1: Reacties
             link_2: Deelnemers
