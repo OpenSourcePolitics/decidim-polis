@@ -1,34 +1,67 @@
----
 es:
   decidim:
-    features:
+    admin:
+      menu:
+        appearance: Apariencia
+        area_types: Tipos de perímetro
+        areas: Perímetros
+        configuration: Configuración
+        help_sections: Secciones de ayuda
+        homepage: Página Principal
+        scope_types: Tipos de ámbito
+        scopes: Ámbitos
+      organization:
+        update:
+          error: Error
+          success: Éxito
+      polis_config:
+        reminder: Recuerde iniciar sesión en Pol.is para que los enlaces directos al interfaz de administración Pol.is funcionen.
+        title: Configuración de Pol.is
+        warning: Este es tu id único, no lo compartes ni lo cambies.
+    components:
       polis:
-        name: Pol.is debate
         settings:
+          step:
+            write_enabled: Escritura habilitada
+            vote_enabled: Votos habilitados
           global:
             title: Título
-            description: Description
-            visualization: Deshabilite la visualización (si marca este parámetro durante la creación de su conversación, no será modificable más adelante). Para cambiarlo debe dirigirse al administrador Pol.is)
-            sign_in_social: Active la conexión a través de las redes sociales (si marca este parámetro al crear su conversación, no será modificable a partir de entonces. Para cambiarlo tendrá que ir al administrador Pol.is)
-          step:
-            user_can_write: Habilitar comentarios
-            user_can_vote: Habilitar votos
+            description: Descripción
+            social_sign_in_enabled: Registro social activado
+            visualization_enabled: Visualización activada
+        name: Pol.is debate
         views:
-          titre_message: Participa en el debate
-          texte_message_1: Para participar en el debate
-          lien_message_1: inicia sesión con tu cuenta
-          texte_message_2: o
-          lien_message_2: registro
-          titre_help_1: Cómo funciona ?
-          titre_help_2: Bienvenido a un nuevo tipo de discusión.
-          help_1: Vote por las opiniones de los demás.
-          help_2: Expresa tuyo
-          help_3: De 7 votantes puedes observar grupos de formación de opinión.
-          help_4: Trate de generar consenso proponiendo nuevos puntos de vista (los grupos de opinión evolucionan en tiempo real).
-          moder: "Moderación:"
-          donnée: "Datos:"
-          admin_1: Comentarios
-          admin_2: Participantes
-          admin_3: Estadísticas
-          admin_4: Exportar
-          admin_5: Resumen
+          moder: 'Moderación:'
+    polis:
+      admin:
+        configuration:
+          edit:
+            update: Actualizar
+      polis:
+        show:
+          data: Datos
+          help:
+            bottom: Welcome to a new type of discussion
+            description_1: Vote on the opinions of others
+            description_2: Express your opinion
+            description_3: Above seven voters, you can see opinion groups forming
+            description_4: Try to create a consensus by offering new points of view (Opinion groups are changing real time)
+            top: How does this work ?
+          login_instructions: Login with your account
+          login_title: Contribute to the debate
+          moderation:
+            link_1: Comentarios
+            link_2: Participantes
+            link_3: Enlace 3
+            link_4: Enlace 4
+            link_5: Enlace 5
+          or: O
+          question_circle_alt: Alt círculo de preguntas
+  layouts:
+    decidim:
+      admin:
+        settings:
+          title: Título
+      header:
+        sign_in: Iniciar sesión
+        sign_up: Registrarse

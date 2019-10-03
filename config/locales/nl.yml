@@ -1,48 +1,67 @@
----
 nl:
   decidim:
-    follows:
-      create:
-        button: Volgen
-    features:
+    admin:
+      menu:
+        appearance: Uiterlijk
+        area_types: Gebiedstypen
+        areas: Gebieden
+        configuration: Configuratie
+        help_sections: Help secties
+        homepage: Startpagina
+        scope_types: Scope types
+        scopes: Scopes
+      organization:
+        update:
+          error: Fout
+          success: Succes
+      polis_config:
+        reminder: Vergeet niet om in te loggen bij Pol.is zo dat de directe links naar de Pol. is administratie interface werk.
+        title: Configuratie Pol.is
+        warning: Deze identificatiecode is uniek voor u, niet delen of wijzigen.
+    components:
       polis:
-        name: Pol.is debat
         settings:
+          step:
+            write_enabled: Schrijf geactiveerd
+            vote_enabled: Stemmen geactiveerd
           global:
             title: Titel
             description: Beschrijving
-            visualization: Schakel visualisatie uit (als u deze parameter aanvinkt tijdens het maken van uw gesprek, kan deze later niet meer worden gewijzigd. Om dit te wijzigen, moet u naar de Pol.is-beheerder gaan)
-            sign_in_social: Activeer de verbinding via sociale netwerken (als u deze parameter aanvinkt bij het maken van uw gesprek, kan deze daarna niet worden gewijzigd. Om deze te wijzigen, moet u zich wenden tot de Pol.is-beheerder)
-          step:
-            user_can_write: Reacties inschakelen
-            user_can_vote: Stemmen inschakelen
+            social_sign_in_enabled: Social inloggen ingeschakeld
+            visualization_enabled: Visualisatie ingeschakeld
+        name: Pol.is debat
         views:
-          titre_message: Neem deel aan het debat
-          texte_message_1: Om deel te nemen aan het debat
-          lien_message_1: inloggen met uw account
-          texte_message_2: of
-          lien_message_2: meld je aan
-          titre_help_1: Hoe werkt het ?
-          titre_help_2: Welkom bij een nieuw soort discussie.
-          help_1: Stem op de meningen van anderen.
-          help_2: Geef je mening.
-          help_3: Vanaf 7 stemmen kunt u opiniegroepen volgen.
-          help_4: Probeer een consensus te bereiken door nieuwe meningen voor te stellen. (opiniegroepen evolueren continu)
-          moder: "Matiging :"
-          donnée: "Gegevens :"
-          admin_1: Opmerkingen
-          admin_2: Deelnemers
-          admin_3: Statistieken
-          admin_4: Exporteren
-          admin_5: Samenvatting
-    admin:
-      polis_config:
-        title: Configuratie Pol.is
-        edit:
-          update: Bijwerken
-        warning: Deze identificatiecode is uniek voor u, niet delen of wijzigen.
-        reminder: Vergeet niet om in te loggen bij Pol.is zo dat de directe links naar de Pol. is administratie interface werk.
-  activemodel:
-    attributes:
-      organization:
-        polis_site_id: polis_site_id
+          moder: 'Moderatie:'
+    polis:
+      admin:
+        configuration:
+          edit:
+            update: Bijwerken
+      polis:
+        show:
+          data: Data
+          help:
+            bottom: Welcome to a new type of discussion
+            description_1: Vote on the opinions of others
+            description_2: Express your opinion
+            description_3: Above seven voters, you can see opinion groups forming
+            description_4: Try to create a consensus by offering new points of view (Opinion groups are changing real time)
+            top: How does this work ?
+          login_instructions: Login with your account
+          login_title: Contribute to the debate
+          moderation:
+            link_1: Reacties
+            link_2: Deelnemers
+            link_3: Link 3
+            link_4: Link 4
+            link_5: Link 5
+          or: Of
+          question_circle_alt: Vraagcirkel alt
+  layouts:
+    decidim:
+      admin:
+        settings:
+          title: Titel
+      header:
+        sign_in: Log in
+        sign_up: Registratie
