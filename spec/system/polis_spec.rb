@@ -1,4 +1,3 @@
-
 # frozen_string_literal: true
 
 require "spec_helper"
@@ -12,20 +11,19 @@ describe "pol.is", type: :system do
   # let(:step) { participatory_process.steps.first }
   let(:manifest_name) { "polis" }
 
-
   before do
     switch_to_host(organization.host)
     visit_component
   end
 
-  it "should always display the pol.is iframe" do
+  it "alwayses display the pol.is iframe" do
     within ".polis" do
       expect(page).to have_css("iframe")
     end
   end
 
   context "when user isn't logged in" do
-    it 'should encourage to log in' do
+    it "encourages to log in" do
       expect(page).to have_content("Login with your account")
     end
   end
@@ -36,7 +34,7 @@ describe "pol.is", type: :system do
       visit_component
     end
 
-    it 'should not display comments and participants' do
+    it "does not display comments and participants" do
       expect(page).not_to have_content("Comments")
       expect(page).not_to have_content("Participants")
     end
@@ -50,7 +48,7 @@ describe "pol.is", type: :system do
       visit_component
     end
 
-    it 'should display the admin section' do
+    it "displays the admin section" do
       expect(page).to have_content("Admin Pol.is")
       expect(page).to have_content("Comments")
       expect(page).to have_content("Participants")

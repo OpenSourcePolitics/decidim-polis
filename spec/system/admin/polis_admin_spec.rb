@@ -1,4 +1,3 @@
-
 # frozen_string_literal: true
 
 require "spec_helper"
@@ -19,21 +18,21 @@ describe "manage pol.is", type: :system do
     expect(page).to have_content("Pol.is")
   end
 
-  it 'should access pol.is configuration' do
+  it "accesses pol.is configuration" do
     click_link "Pol.is"
     within ".card-title" do
       expect(page).to have_content("POL.IS CONFIGURATION")
     end
   end
 
-  it 'accept pol.is site id' do
+  it "accept pol.is site id" do
     fill_polis_site_id
   end
 
   context "when site_id is not provided" do
     let(:site_id) { "" }
 
-    it "should update the page" do
+    it "updates the page" do
       fill_polis_site_id
     end
   end
