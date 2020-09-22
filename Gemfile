@@ -4,18 +4,18 @@ source "https://rubygems.org"
 
 ruby RUBY_VERSION
 
-gem "decidim", git: "https://github.com/decidim/decidim", tag: "0.18-stable"
+gem "decidim", git: "https://github.com/decidim/decidim", tag: "0.21-stable"
 gem "decidim-polis", path: "."
 
-gem "puma", "~> 3.0"
+gem "puma", "~> 4.3"
 gem "uglifier", "~> 4.1"
 
 gem "bootsnap"
 
 group :development, :test do
-  gem "byebug", "~> 10.0", platform: :mri
+  gem "byebug", "~> 11.0", platform: :mri
 
-  gem "decidim-dev", git: "https://github.com/decidim/decidim", tag: "0.18-stable"
+  gem "decidim-dev", git: "https://github.com/decidim/decidim", tag: "0.21-stable"
 end
 
 group :development do
