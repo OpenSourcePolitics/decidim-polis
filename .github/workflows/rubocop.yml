@@ -22,4 +22,4 @@ jobs:
       - name: Install dependencies
         run: bundle install
       - name: Rubocop linting
-        run: gem install rubocop && rubocop
+        run: bundle exec rubocop -P
