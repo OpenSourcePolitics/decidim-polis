@@ -1,4 +1,4 @@
-name: ERB filesopensou linting
+name: ERB linting
 
 on:
   push:
