@@ -8,7 +8,6 @@ describe "pol.is", type: :system do
   let(:site_id) { ENV["POLIS_SITE_ID"] }
   let(:organization) { create(:organization, polis_site_id: site_id) }
   let(:user) { create :user, :confirmed, organization: organization }
-  # let(:step) { participatory_process.steps.first }
   let(:manifest_name) { "polis" }
 
   before do
