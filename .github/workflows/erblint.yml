@@ -1,14 +1,15 @@
 name: ERB files linting
-
 on:
   push:
     branches:
+      - develop
       - master
+      - release/*
+      - feature/*
       - "*-stable"
   pull_request:
     branches:
-      - master
-      - "*-stable"
+      - "*"
 
 jobs:
   lint:
