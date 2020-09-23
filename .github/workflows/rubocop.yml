@@ -22,6 +22,4 @@ jobs:
       - name: Install dependencies
         run: bundle install
       - name: Rubocop linting
-        run: bundle install rubocop && rubocop
-      - name: ERB files linting
-        run: bundle install erblint && bundle exec erblint --lint-all
+        run: gem install rubocop && rubocop
