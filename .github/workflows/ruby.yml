@@ -40,4 +40,9 @@ jobs:
     - name: Install dependencies
       run: bundle install
     - name: Run tests
-      run: bundle exec rake test_app && bundle exec rake spec
+      env:
+        RAILS_ENV: test
+        DATABASE_USERNAME: postgres
+      run: |
+        bundle exec rake test_app
+        bundle exec rake spec
