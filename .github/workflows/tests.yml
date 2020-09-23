@@ -1,4 +1,11 @@
-name: Ruby
+# This workflow uses actions that are not certified by GitHub.
+# They are provided by a third-party and are governed by
+# separate terms of service, privacy policy, and support
+# documentation.
+# This workflow will download a prebuilt Ruby version, install dependencies and run tests with Rake
+# For more information see: https://github.com/marketplace/actions/setup-ruby-jruby-and-truffleruby
+
+name: Tests
 
 on:
   push:
@@ -15,20 +22,28 @@ jobs:
 
     runs-on: ubuntu-latest
 
+    services:
+      postgres:
+        image: postgres:11.6-alpine
+        ports:
+          - 5432:5432
+
     steps:
-      - uses: actions/checkout@v2
-      - name: Set up Ruby
-        uses: ruby/setup-ruby@ec106b438a1ff6ff109590de34ddc62c540232e0
-        with:
-          ruby-version: 2.6
-      - name: Install dependencies
-        run: bundle install
-      - name: Run tests
-        run: bundle exec rake spec
-      - name: RuboCop Linter Action
-        uses: andrewmcodes/rubocop-linter-action@v3.3.0
-        with:
-          action_config_path: .github/config/rubocop_linter_action.yml
-          exit_on_failure: true
-      - name: Erb action
-        uses: revans/erb-action@v0.0.4
+    - uses: actions/checkout@v2
+    - name: Set up Ruby
+    # To automatically get bug fixes and new Ruby versions for ruby/setup-ruby,
+    # change this to (see https://github.com/ruby/setup-ruby#versioning):
+    # uses: ruby/setup-ruby@v1
+      uses: ruby/setup-ruby@ec106b438a1ff6ff109590de34ddc62c540232e0
+      with:
+        ruby-version: 2.6
+    - name: Install dependencies
+      run: bundle install
+    - name: Run tests
+      env:
+        RAILS_ENV: test
+        DATABASE_USERNAME: postgres
+        POLIS_SITE_ID: ${{ secrets.POLIS_SITE_ID }}
+      run: |
+        bundle exec rake test_app
+        bundle exec rake spec
