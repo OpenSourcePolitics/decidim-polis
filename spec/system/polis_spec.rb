@@ -5,7 +5,7 @@ require "spec_helper"
 describe "pol.is", type: :system do
   include_context "with a component"
 
-  let(:site_id) { ENV["POLIS_SITE_ID"] } # to store in local
+  let(:site_id) { ENV["POLIS_SITE_ID"] }
   let(:organization) { create(:organization, polis_site_id: site_id) }
   let(:user) { create :user, :confirmed, organization: organization }
   # let(:step) { participatory_process.steps.first }
