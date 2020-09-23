@@ -8,7 +8,6 @@ FactoryBot.define do
     manifest_name { :polis }
     participatory_space { create(:participatory_process, :with_steps) }
   end
-  # Add engine factories here
 end
 
 FactoryBot.modify do
