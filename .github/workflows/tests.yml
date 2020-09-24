@@ -1,4 +1,4 @@
-name: [CI] Polis
+name: "[CI] Polis"
 
 on:
   push:
