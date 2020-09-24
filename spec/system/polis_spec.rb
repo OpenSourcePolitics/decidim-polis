@@ -12,7 +12,9 @@ describe "pol.is", type: :system do
   let(:fixed_slug) { "fixed-test-slug" }
 
   before do
+    # rubocop:disable RSpec/AnyInstance
     allow_any_instance_of(Decidim::Polis::PolisController).to receive(:page_id).and_return(fixed_slug)
+    # rubocop:enable RSpec/AnyInstance
     switch_to_host(organization.host)
     visit_component
   end
