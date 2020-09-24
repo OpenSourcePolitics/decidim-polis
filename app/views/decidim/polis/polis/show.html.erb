@@ -57,7 +57,7 @@
           data-auth_needed_to_write="<%= component_settings.social_sign_in_enabled? %>"
           data-xid="<%= current_user.id %>"
           data-x_name="<%= current_user.name %>"
-          data-x_profile_image_url=<%= avatar_url %>
+          data-x_profile_image_url="https://<%= current_organization.host %><%= current_user.avatar %>"
           style="padding-left:0px;padding-right:0px;">
         </div>
         <script async='true' src='https://pol.is/embed.js'></script>
@@ -71,7 +71,6 @@
                 <%= t(".or") %>
               <% end %>
               <%= link_to t("layouts.decidim.header.sign_in"), decidim.new_user_session_path, class: "sign-in-link" %>
-
             </p>
           </div>
         </div>
