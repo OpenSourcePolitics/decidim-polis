@@ -1,46 +1,67 @@
----
 de:
   decidim:
-    features:
+    admin:
+      menu:
+        appearance: Aussehen
+        area_types: Bereichstypen
+        areas: Bereiche
+        configuration: Konfiguration
+        help_sections: Hilfeabschnitte
+        homepage: Startseite
+        scope_types: Scope-Arten
+        scopes: Scopes
+      organization:
+        update:
+          error: Fehler
+          success: Erfolg
+      polis_config:
+        reminder: Denken Sie daran, sich bei Pol.is anzumelden, damit die direkten Links zur Administrationsschnittstelle von Pol.is funktionieren.
+        title: Pol.is-Konfiguration
+        warning: Diese ID ist für Sie persönlich bestimmt, geben Sie sie nicht weiter und ändern Sie sie nicht.
+    components:
       polis:
-        name: Pol.is Gespräch
         settings:
+          step:
+            write_enabled: Schreiben aktiviert
+            vote_enabled: Stimmen aktiviert
           global:
             title: Titel
             description: Beschreibung
-            visualization: Anzeige deaktivieren (wenn Sie diesen Parameter beim Erstellen Ihres Gesprächs ankreuzen, lässt er sich später nicht mehr ändern. Um ihn dennoch zu modifizieren, müssen Sie in die Administrationsschnittstelle von Pol.is gehen).
-            sign_in_social: Verbindung über die sozialen Netzwerke aktivieren (wenn Sie diesen Parameter beim Erstellen Ihres Gesprächs ankreuzen, lässt er sich später nicht mehr ändern. Um ihn dennoch zu modifizieren, müssen Sie in die Administrationsschnittstelle von Pol.is gehen).
-          step:
-            user_can_write: Kommentare aktivieren
-            user_can_vote: Abstimmungen aktivieren
+            social_sign_in_enabled: Soziales Anmelden aktiviert
+            visualization_enabled: Visualisierung aktiviert
+        name: Pol.is debatte
         views:
-          titre_message: An der Debatte teilnehmen
-          texte_message_1: Um sich an der Debatte zu beteiligen,
-          lien_message_1: müssen Sie sich mit Ihrem Konto anmelden
-          texte_message_2: oder
-          lien_message_2: sich registrieren
-          titre_help_1: Wie funktioniert es?
-          titre_help_2: Herzlich Willkommen bei einem neuen Diskussionstyp.
-          help_1: Stimmen Sie über die Meinungen anderer ab.
-          help_2: Äußern Sie Ihre Meinung.
-          help_3: Ab 7 Wählern können Sie beobachten, wie sich Meinungsgruppen bilden.
-          help_4: Versuchen Sie, einen Konsens zu finden, indem Sie neue Ansichten vorschlagen (die Meinungsgruppen entwickeln sich in Echtzeit).
-          moder: "Moderation"
-          donnée: "Daten"
-          admin_1: Kommentare
-          admin_2: Teilnehmer
-          admin_3: Statistiken
-          admin_4: Export
-          admin_5: Zusammenfassung
-    admin:
-      polis_config:
-        title: Pol.is-Konfiguration
-        edit:
-          update: Aktualisierung
-        warning: Diese ID ist für Sie persönlich bestimmt, geben Sie sie nicht weiter und ändern Sie sie nicht.
-        reminder: Denken Sie daran, sich bei Pol.is anzumelden, damit die direkten Links zur Administrationsschnittstelle von Pol.is funktionieren.
-  activemodel:
-    attributes:
-      organization:
-        polis_site_id: polis_site_id
-
+          moder: 'Moderation:'
+    polis:
+      admin:
+        configuration:
+          edit:
+            update: Aktualisierung
+      polis:
+        show:
+          data: Daten
+          help:
+            bottom: Welcome to a new type of discussion
+            description_1: Vote on the opinions of others
+            description_2: Express your opinion
+            description_3: Above seven voters, you can see opinion groups forming
+            description_4: Try to create a consensus by offering new points of view (Opinion groups are changing real time)
+            top: How does this work ?
+          login_instructions: Login with your account
+          login_title: Contribute to the debate
+          moderation:
+            link_1: Kommentare
+            link_2: Teilnehmer
+            link_3: Link 3
+            link_4: Link 4
+            link_5: Link 5
+          or: Oder
+          question_circle_alt: Fragenkreis alt
+  layouts:
+    decidim:
+      admin:
+        settings:
+          title: Titel
+      header:
+        sign_in: Anmelden
+        sign_up: Registrieren

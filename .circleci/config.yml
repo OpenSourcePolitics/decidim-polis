@@ -1,0 +1,77 @@
+---
+
+version: 2
+
+jobs:
+  build:
+    docker:
+      - image: decidim/decidim@sha256:348fb1faa49cfe76ba7cbeafc67ca09002cf95f0ffa7a76eefa9d5b3774e0ee9
+        environment:
+          DATABASE_USERNAME: postgres
+
+      - image: postgres
+        environment:
+          POSTGRES_USER: postgres
+
+    working_directory: /app
+
+    steps:
+      - checkout
+
+      - restore_cache:
+          keys:
+            - bundler-dependencies-{{ checksum "Gemfile.lock" }}
+
+      - run:
+          name: Install dependencies
+          command: bundle install
+
+      - save_cache:
+          key: bundler-dependencies-{{ checksum "Gemfile.lock" }}
+          paths:
+            - /usr/local/bundle
+
+      - run:
+          name: Wait for db
+          command: dockerize -wait tcp://localhost:5432 -timeout 1m
+
+      - run:
+          name: Generate test app
+          command: bundle exec rake test_app
+
+      - run:
+          name: Run rubocop
+          command: bundle exec rubocop -P
+
+      - run:
+          name: Run erblint
+          command: /app/.circleci/run_erblint.sh
+
+      - run:
+          name: Setup Code Climate test-reporter
+          command: |
+            # download test reporter as a static binary
+              curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
+              chmod +x ./cc-test-reporter
+      - run:
+          name: run tests
+          command: |
+            ./cc-test-reporter before-build
+            mkdir /tmp/test-results
+            TEST_FILES="$(circleci tests glob "spec/**/*_spec.rb" | \
+            circleci tests split --split-by=timings)"
+            bundle exec rspec \
+            --format progress \
+            --format RspecJunitFormatter \
+            --out /tmp/test-results/rspec.xml \
+            --format progress \
+            $TEST_FILES
+      - run:
+          name: Report test coverage
+          command: |
+            ./cc-test-reporter after-build --coverage-input-type simplecov coverage/.resultset.json --exit-code $?
+      - store_test_results:
+          path: /tmp/test-results
+
+      - store_artifacts:
+          path: /app/spec/decidim_dummy_app/tmp/screenshots

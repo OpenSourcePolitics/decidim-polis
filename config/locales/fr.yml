@@ -1,45 +1,67 @@
----
 fr:
   decidim:
-    features:
+    admin:
+      menu:
+        appearance: Apparence
+        area_types: Types de périmètre d'assemblée
+        areas: Périmètres d'assemblée
+        configuration: Configuration
+        help_sections: Messages d'aide contextuels
+        homepage: Page d'accueil
+        scope_types: Types de secteurs
+        scopes: Secteurs
+      organization:
+        update:
+          error: Erreur
+          success: Succès
+      polis_config:
+        reminder: Pensez à vous connecter à Pol.is pour que les liens directs vers l'interface d'administration de Pol.is fonctionnent
+        title: Configuration Pol.is
+        warning: Cet identifiant vous est unique, ne le partagez pas et ne le modifiez pas.
+    components:
       polis:
-        name: Conversation Pol.is
         settings:
+          step:
+            write_enabled: Écriture activée
+            vote_enabled: Vote activé
           global:
             title: Titre
             description: Description
-            visualization: Désactiver la visualisation (si vous cochez ce paramètre lors de la création de votre conversation, il ne sera plus modifiable par la suite. Pour le modifier il faudra vous rendre dans l'admin de Pol.is)
-            sign_in_social: Activer la connexion via les réseaux sociaux (si vous cochez ce paramètre lors de la création de votre conversation, il ne sera plus modifiable par la suite. Pour le modifier il faudra vous rendre dans l'admin de Pol.is)
-          step:
-            user_can_write: Activer les commentaires
-            user_can_vote: Activer les votes
+            social_sign_in_enabled: Connexion via réseaux sociaux activée
+            visualization_enabled: Visualisation activée
+        name: Débat pol.is
         views:
-          titre_message: Participer au débat
-          texte_message_1: Pour participer au débat
-          lien_message_1: connectez vous avec votre compte
-          texte_message_2: ou
-          lien_message_2: inscrivez vous
-          titre_help_1: Comment ça marche ?
-          titre_help_2: Bienvenue sur un nouveau type de discussion.
-          help_1: Votez sur les opinions des autres.
-          help_2: Exprimez la vôtre.
-          help_3: À partir de 7 votants vous pouvez observer des groupes d'opinion se former.
-          help_4: Tentez de faire émerger un consensus en proposant de nouveaux points de vue (Les groupe d'opinion évoluent en temps réel).
-          moder: "Modération :"
-          donnée: "Données :"
-          admin_1: Commentaires
-          admin_2: Participants
-          admin_3: Statistiques
-          admin_4: Export
-          admin_5: Synthèse
-    admin:
-      polis_config:
-        title: Configuration Pol.is
-        edit:
-          update: Mis a jour
-        warning: Cet identifiant vous est unique, ne le partagez pas et ne le modifiez pas.
-        reminder: Pensez à vous connecter à Pol.is pour que les liens directs vers l'interface d'administration de Pol.is fonctionnent
-  activemodel:
-    attributes:
-      organization:
-        polis_site_id: polis_site_id
+          moder: 'Modération:'
+    polis:
+      admin:
+        configuration:
+          edit:
+            update: Mettre à jour
+      polis:
+        show:
+          data: Données
+          help:
+            bottom: Welcome to a new type of discussion
+            description_1: Vote on the opinions of others
+            description_2: Express your opinion
+            description_3: Above seven voters, you can see opinion groups forming
+            description_4: Try to create a consensus by offering new points of view (Opinion groups are changing real time)
+            top: How does this work ?
+          login_instructions: Login with your account
+          login_title: Contribute to the debate
+          moderation:
+            link_1: Commentaires
+            link_2: Participants
+            link_3: Lien 3
+            link_4: Lien 4
+            link_5: Lien 5
+          or: ou
+          question_circle_alt: Alt du cercle des questions
+  layouts:
+    decidim:
+      admin:
+        settings:
+          title: Titre
+      header:
+        sign_in: connectez vous avec votre compte
+        sign_up: inscrivez vous

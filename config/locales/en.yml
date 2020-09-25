@@ -1,45 +1,67 @@
----
 en:
   decidim:
-    features:
+    admin:
+      menu:
+        appearance: Appearance
+        area_types: Area types
+        areas: Areas
+        configuration: Configuration
+        help_sections: Help sections
+        homepage: Homepage
+        scope_types: Scope types
+        scopes: Scopes
+      organization:
+        update:
+          error: Error
+          success: Success
+      polis_config:
+        reminder: Remember to log in to Pol.is so that the direct links to the Pol.is administration interface work.
+        title: Pol.is configuration
+        warning: This is your unique id, don't share it or change it.
+    components:
       polis:
-        name: Pol.is debate
         settings:
+          step:
+            write_enabled: Write enabled
+            vote_enabled: Vote enabled
           global:
             title: Title
             description: Description
-            visualization: Disable visualization (if you check this parameter during the creation of your conversation, it will not be modifiable later.To change it you must go to the Pol.is admin)
-            sign_in_social: Activate the connection via social networks (if you check this parameter when creating your conversation, it will not be modifiable thereafter. To change it you will have to go in the Pol.is admin)
-          step:
-            user_can_write: Enable comments
-            user_can_vote: Enable votes
+            social_sign_in_enabled: Social sign in enabled
+            visualization_enabled: Visualization enabled
+        name: Pol.is debate
         views:
-          titre_message: Participate in the debate
-          texte_message_1: To participate in the debate
-          lien_message_1: login with your account
-          texte_message_2: or
-          lien_message_2: register
-          titre_help_1: How does it works ?
-          titre_help_2: Welcome to a new type of discussion.
-          help_1: Vote on the opinions of others.
-          help_2: Express yours
-          help_3: From 7 voters you can observe groups of opinion forming.
-          help_4: Try to bring consensus by proposing new points of view (The opinion groups evolve in real time).
-          moder: "Moderation:"
-          donnée: "Data:"
-          admin_1: Comments
-          admin_2: Participants
-          admin_3: Statistics
-          admin_4: Export
-          admin_5: Summary
-    admin:
-      polis_config:
-        title: Pol.is configuration
-        edit:
-          update: Update
-        warning: This is your unique id, don't share it or change it.
-        reminder: Remember to log in to Pol.is so that the direct links to the Pol.is administration interface work.
-  activemodel:
-    attributes:
-      organization:
-        polis_site_id: polis_site_id
+          moder: 'Moderation:'
+    polis:
+      admin:
+        configuration:
+          edit:
+            update: Update
+      polis:
+        show:
+          data: Data
+          help:
+            bottom: Welcome to a new type of discussion
+            description_1: Vote on the opinions of others
+            description_2: Express your opinion
+            description_3: Above seven voters, you can see opinion groups forming
+            description_4: Try to create a consensus by offering new points of view (Opinion groups are changing real time)
+            top: How does this work ?
+          login_instructions: Login with your account
+          login_title: Contribute to the debate
+          moderation:
+            link_1: Comments
+            link_2: Participants
+            link_3: Link 3
+            link_4: Link 4
+            link_5: Link 5
+          or: Or
+          question_circle_alt: Question circle alt
+  layouts:
+    decidim:
+      admin:
+        settings:
+          title: Title
+      header:
+        sign_in: Sign in
+        sign_up: Sign up
