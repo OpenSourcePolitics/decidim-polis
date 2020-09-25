@@ -7,7 +7,8 @@ ruby RUBY_VERSION
 gem "decidim", git: "https://github.com/decidim/decidim", tag: "0.18-stable"
 gem "decidim-polis", path: "."
 
-gem "puma", "~> 3.0"
+gem "puma", "~> 3.11"
+gem "sprockets", "~> 3.7.2"
 gem "uglifier", "~> 4.1"
 
 gem "bootsnap"

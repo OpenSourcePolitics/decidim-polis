@@ -20,4 +20,5 @@ Gem::Specification.new do |s|
 
   s.add_dependency "decidim-core", Decidim::Polis.version
   s.add_development_dependency "decidim-dev"
+  s.add_dependency "sprockets", "~> 3.7", "< 4"
 end
