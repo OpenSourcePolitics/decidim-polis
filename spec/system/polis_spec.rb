@@ -5,21 +5,29 @@ require "spec_helper"
 describe "pol.is", type: :system do
   include_context "with a component"
 
-  let(:site_id) { ENV["POLIS_SITE_ID"] } # to store in local
+  let(:site_id) { ENV["POLIS_SITE_ID"] }
   let(:organization) { create(:organization, polis_site_id: site_id) }
   let(:user) { create :user, :confirmed, organization: organization }
-  # let(:step) { participatory_process.steps.first }
   let(:manifest_name) { "polis" }
+  let(:fixed_slug) { "fixed-test-slug" }
 
   before do
+    # rubocop:disable RSpec/AnyInstance
+    allow_any_instance_of(Decidim::Polis::PolisController).to receive(:page_id).and_return(fixed_slug)
+    # rubocop:enable RSpec/AnyInstance
     switch_to_host(organization.host)
     visit_component
   end
 
-  it "alwayses display the pol.is iframe" do
+  it "displays the pol.is iframe" do
     within ".polis" do
       expect(page).to have_css("iframe")
     end
+  end
+
+  it "displays data attributes" do
+    expect(page).to have_css(".polis[data-site_id=\"#{site_id}\"]")
+    expect(page).to have_css(".polis[data-page_id=\"#{fixed_slug}\"]")
   end
 
   context "when user isn't logged in" do

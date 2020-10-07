@@ -23,7 +23,6 @@ module Decidim
         # Returns nothing.
         def call
           return broadcast(:invalid) if form.invalid?
-
           return broadcast(:ok, @organization) if update_organization
 
           broadcast(:invalid)

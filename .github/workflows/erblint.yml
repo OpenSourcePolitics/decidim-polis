@@ -1,4 +1,4 @@
-name: ERB files linting
+name: ERB linting
 
 on:
   push:
@@ -22,4 +22,4 @@ jobs:
       - name: Install dependencies
         run: bundle install
       - name: ERB files linting
-        run: bundle install erblint && bundle exec erblint --lint-all
+        run: ./.github/run_erblint.sh
