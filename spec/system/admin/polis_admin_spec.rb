@@ -21,7 +21,7 @@ describe "manage pol.is", type: :system do
   it "accesses pol.is configuration" do
     click_link "Pol.is"
     within ".card-title" do
-      expect(page).to have_content("POL.IS CONFIGURATION")
+      expect(page).to have_content("Pol.is configuration")
     end
   end
 
