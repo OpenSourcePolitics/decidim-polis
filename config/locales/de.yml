@@ -41,14 +41,14 @@ de:
         show:
           data: Daten
           help:
-            bottom: Welcome to a new type of discussion
-            description_1: Vote on the opinions of others
-            description_2: Express your opinion
-            description_3: Above seven voters, you can see opinion groups forming
-            description_4: Try to create a consensus by offering new points of view (Opinion groups are changing real time)
-            top: How does this work ?
-          login_instructions: Login with your account
-          login_title: Contribute to the debate
+            bottom: Willkommen zu einer neuen Art von Diskussion
+            description_1: Stimme über die Vorschläge anderer ab
+            description_2: Äußern Sie Ihre Meinung
+            description_3: Bei mehr als sieben Stimmen können Sie sehen, wie sich Meinungsgruppen bilden
+            description_4: Versuchen Sie, einen Konsens herzustellen, indem Sie neue Standpunkte anbieten (Meinungsgruppen ändern sich in Echtzeit)
+            top: Wie funktioniert das?
+          login_instructions: Loggen Sie sich Ihrem Konto ein
+          login_title: Trage zur Debatte bei
           moderation:
             link_1: Kommentare
             link_2: Teilnehmer
