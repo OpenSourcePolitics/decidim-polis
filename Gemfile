@@ -4,7 +4,7 @@ source "https://rubygems.org"
 
 ruby RUBY_VERSION
 
-gem "decidim", git: "https://github.com/decidim/decidim", tag: "release/0.23-stable"
+gem "decidim", "0.23.5"
 gem "decidim-polis", path: "."
 
 gem "puma", "~> 4.3"
@@ -15,7 +15,7 @@ gem "bootsnap"
 group :development, :test do
   gem "byebug", "~> 11.0", platform: :mri
 
-  gem "decidim-dev", git: "https://github.com/decidim/decidim", tag: "release/0.23-stable"
+  gem "decidim-dev", "0.23.5"
 end
 
 group :development do
