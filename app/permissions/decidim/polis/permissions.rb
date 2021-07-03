@@ -5,6 +5,7 @@ module Decidim
     class Permissions < Decidim::DefaultPermissions
       def permissions
         return permission_action unless user
+
         can_manage? if permission_action.action == :manage && permission_action.subject == :polis
 
         permission_action

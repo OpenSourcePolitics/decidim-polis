@@ -1,0 +1,36 @@
+name: "[CI] Polis"
+
+on:
+  push:
+    branches:
+      - master
+      - "*-stable"
+  pull_request:
+    branches:
+      - master
+      - "*-stable"
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: postgres:11.6-alpine
+        ports:
+          - 5432:5432
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up Ruby
+      uses: ruby/setup-ruby@ec106b438a1ff6ff109590de34ddc62c540232e0
+      with:
+        ruby-version: 2.6
+    - name: Install dependencies
+      run: bundle install
+    - name: Run tests
+      env:
+        RAILS_ENV: test
+        DATABASE_USERNAME: postgres
+        POLIS_SITE_ID: ${{ secrets.POLIS_SITE_ID }}
+      run: |
+        bundle exec rake test_app
+        bundle exec rake spec
