@@ -15,9 +15,10 @@ module Decidim
       end
 
       def page_id
-        return unless params[:participatory_process_slug]
+        return unless params[:participatory_process_slug] || params[:assembly_slug]
+        slug = params[:participatory_process_slug].present? ? params[:participatory_process_slug] : params[:assembly_slug]
 
-        "#{current_component.id}#{params[:participatory_process_slug]}"
+        "#{current_component.id}#{slug}"
       end
     end
   end
