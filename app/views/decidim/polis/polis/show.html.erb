@@ -151,8 +151,6 @@
     function getConversationId() {
         window.addEventListener('message', function (event) {
             var data = event.data || {};
-            console.log("event")
-            console.log(event.origin)
             if (!event.origin.match(/<%= site_url_for_regex %>$/)) {
                 return;
             }
