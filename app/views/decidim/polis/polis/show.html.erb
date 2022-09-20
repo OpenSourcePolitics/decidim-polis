@@ -59,7 +59,7 @@
           data-x_name="<%= current_user.name %>"
           data-x_profile_image_url=<%= avatar_url %>
               style="padding-left:0px;padding-right:0px;"></div>
-        <script async='true' src='https://pol.is/embed.js'></script>
+        <script async='true' src=<%= "#{site_url}/embed.js"%>></script>
       <% else %>
         <div class="well">
           <div class="add-comment">
@@ -86,7 +86,7 @@
              data-ucsf="1"
              data-ui_lang="<%= locale %>"
              style="padding-left:0px;padding-right:0px;"></div>
-        <script async='true' src='https://pol.is/embed.js'></script>
+        <script async='true' src=<%= "#{site_url}/embed.js"%>></script>
       <% end %>
     </div>
     <!-- end -->
@@ -151,7 +151,9 @@
     function getConversationId() {
         window.addEventListener('message', function (event) {
             var data = event.data || {};
-            if (!event.origin.match(/pol.is$/)) {
+            console.log("event")
+            console.log(event.origin)
+            if (!event.origin.match(/<%= site_url_for_regex %>$/)) {
                 return;
             }
             var conversationId = data['conversation'].conversation_id;

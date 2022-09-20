@@ -39,7 +39,8 @@ module Decidim
 
         def attributes
           {
-            polis_site_id: form.polis_site_id
+            polis_site_id: form.polis_site_id,
+            polis_site_url: form.polis_site_url
           }
         end
       end
