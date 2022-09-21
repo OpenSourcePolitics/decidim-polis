@@ -51,10 +51,10 @@ fr:
           login_title: Contribute to the debate
           moderation:
             comments: Commentaires
-              participants: Participants
-              stats: Stats
-              exports: Exports
-              reports: Reports
+            participants: Participants
+            stats: Stats
+            exports: Exports
+            reports: Reports
           or: ou
           question_circle_alt: Alt du cercle des questions
   layouts:
