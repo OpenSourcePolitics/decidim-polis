@@ -13,14 +13,12 @@
           <ul class="appendModerateLink"></ul>
           </p>
         </div>
-        <% if @admin %>
-          <div class="columns mediumlarge-5 flex">
-            <p class="h-link">
-              <%= t(".data") %>
-            <ul class="appendAdminLink "></ul>
-            </p>
-          </div>
-        <% end %>
+        <div class="columns mediumlarge-5 flex">
+          <p class="h-link">
+            <%= t(".data") %>
+          <ul class="appendAdminLink "></ul>
+          </p>
+        </div>
       </div>
     <% end %>
     <!-- end -->
@@ -58,8 +56,8 @@
           data-xid="<%= current_user.id %>"
           data-x_name="<%= current_user.name %>"
           data-x_profile_image_url=<%= avatar_url %>
-              style="padding-left:0px;padding-right:0px;"></div>
-        <script async='true' src=<%= "#{site_url}/embed.js"%>></script>
+            style="padding-left:0px;padding-right:0px;"></div>
+        <script async='true' src=<%= "#{site_url}/embed.js" %>></script>
       <% else %>
         <div class="well">
           <div class="add-comment">
@@ -86,7 +84,7 @@
              data-ucsf="1"
              data-ui_lang="<%= locale %>"
              style="padding-left:0px;padding-right:0px;"></div>
-        <script async='true' src=<%= "#{site_url}/embed.js"%>></script>
+        <script async='true' src=<%= "#{site_url}/embed.js" %>></script>
       <% end %>
     </div>
     <!-- end -->
