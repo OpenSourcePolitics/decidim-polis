@@ -50,11 +50,11 @@ fr:
           login_instructions: Login with your account
           login_title: Contribute to the debate
           moderation:
-            link_1: Commentaires
-            link_2: Participants
-            link_3: Lien 3
-            link_4: Lien 4
-            link_5: Lien 5
+            comments: Commentaires
+              participants: Participants
+              stats: Stats
+              exports: Exports
+              reports: Reports
           or: ou
           question_circle_alt: Alt du cercle des questions
   layouts:

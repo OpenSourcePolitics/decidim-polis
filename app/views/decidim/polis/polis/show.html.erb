@@ -158,11 +158,11 @@
     }
 
     function completeUrl(conversation_id) {
-        $('.appendModerateLink').append('<li><a class="btn admin-btn" target="blank" href="<%= site_url %>/m/' + conversation_id + '/comments"><%= t(".moderation.link_1") %></a></li>')
-        $('.appendModerateLink').append('<li><a class="btn admin-btn" target="blank" href="<%= site_url %>/m/' + conversation_id + '/participants"><%= t(".moderation.link_2") %></a></li>')
-        $('.appendAdminLink').append('<li><a class="btn admin-btn" target="blank" href="<%= site_url %>/m/' + conversation_id + '/stats"><%= t(".moderation.link_3") %></a></li>')
-        $('.appendAdminLink').append('<li><a class="btn admin-btn" target="blank" href="<%= site_url %>/m/' + conversation_id + '/export"><%= t(".moderation.link_4") %></a></li>')
-        $('.appendAdminLink').append('<li><a class="btn admin-btn" target="blank" href="<%= site_url %>/m/' + conversation_id + '/reports"><%= t(".moderation.link_5") %></a></li>')
+        $('.appendModerateLink').append('<li><a class="btn admin-btn" target="blank" href="<%= site_url %>/m/' + conversation_id + '/comments"><%= t(".moderation.comments") %></a></li>')
+        $('.appendModerateLink').append('<li><a class="btn admin-btn" target="blank" href="<%= site_url %>/m/' + conversation_id + '/participants"><%= t(".moderation.participants") %></a></li>')
+        $('.appendAdminLink').append('<li><a class="btn admin-btn" target="blank" href="<%= site_url %>/m/' + conversation_id + '/stats"><%= t(".moderation.stats") %></a></li>')
+        $('.appendAdminLink').append('<li><a class="btn admin-btn" target="blank" href="<%= site_url %>/m/' + conversation_id + '/export"><%= t(".moderation.exports") %></a></li>')
+        $('.appendAdminLink').append('<li><a class="btn admin-btn" target="blank" href="<%= site_url %>/m/' + conversation_id + '/reports"><%= t(".moderation.reports") %></a></li>')
     }
 
     getConversationId()
