@@ -19,13 +19,13 @@ module Decidim
       end
 
       def site_url_for_regex
-        site_url.sub(/^https?\:\/\/(www.)?/,'')
+        site_url.sub(%r{^https?://(www.)?}, "")
       end
 
       def page_id
         return unless params[:participatory_process_slug] || params[:assembly_slug]
-        
-        slug = params[:participatory_process_slug].present? ? params[:participatory_process_slug] : params[:assembly_slug]
+
+        slug = params[:participatory_process_slug].presence || params[:assembly_slug]
 
         "#{current_component.id}#{slug}"
       end

@@ -25,6 +25,7 @@ module Decidim
           return broadcast(:invalid) if form.invalid?
 
           return broadcast(:ok, @organization) if update_organization
+
           broadcast(:invalid)
         end
 
