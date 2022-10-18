@@ -41,20 +41,20 @@ fr:
         show:
           data: Données
           help:
-            bottom: Welcome to a new type of discussion
-            description_1: Vote on the opinions of others
-            description_2: Express your opinion
-            description_3: Above seven voters, you can see opinion groups forming
-            description_4: Try to create a consensus by offering new points of view (Opinion groups are changing real time)
-            top: How does this work ?
-          login_instructions: Login with your account
-          login_title: Contribute to the debate
+            bottom: Bienvenue dans un nouveau type de discussion
+            description_1: Votez sur les opinions des autres
+            description_2: Exprimez votre opinion
+            description_3: Au-dessus de sept votants, vous pouvez voir des groupes d'opinion se former
+            description_4: Essayez de créer un consensus en proposant de nouveaux points de vue (les groupes d'opinion changent en temps réel)
+            top: Comment cela fonctionne?
+          login_instructions: Connectez-vous avec votre compte
+          login_title: Contribuez au débat
           moderation:
-            link_1: Commentaires
-            link_2: Participants
-            link_3: Lien 3
-            link_4: Lien 4
-            link_5: Lien 5
+            comments: Commentaires
+            participants: Participants
+            stats: Stats
+            exports: Exports
+            reports: Reports
           or: ou
           question_circle_alt: Alt du cercle des questions
   layouts:

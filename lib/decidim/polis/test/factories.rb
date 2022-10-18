@@ -46,6 +46,7 @@ FactoryBot.modify do
       }
     end
     polis_site_id { Faker::Hipster.word }
+    polis_site_url { "https://polis.osp.dev" }
 
     after(:create) do |organization|
       tos_page = Decidim::StaticPage.find_by(slug: "terms-and-conditions", organization: organization)

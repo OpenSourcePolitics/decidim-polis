@@ -4,7 +4,7 @@ module Decidim
   module Polis
     # Exposes the polis resource so users can view them
     class PolisController < Decidim::Polis::ApplicationController
-      helper_method :page_id, :site_id
+      helper_method :page_id, :site_id, :site_url, :site_url_for_regex
 
       def show; end
 
@@ -14,10 +14,20 @@ module Decidim
         current_organization.polis_site_id
       end
 
-      def page_id
-        return unless params[:participatory_process_slug]
+      def site_url
+        current_organization.polis_site_url
+      end
 
-        "#{current_component.id}#{params[:participatory_process_slug]}"
+      def site_url_for_regex
+        site_url.sub(%r{^https?://(www.)?}, "")
+      end
+
+      def page_id
+        return unless params[:participatory_process_slug] || params[:assembly_slug]
+
+        slug = params[:participatory_process_slug].presence || params[:assembly_slug]
+
+        "#{current_component.id}#{slug}"
       end
     end
   end

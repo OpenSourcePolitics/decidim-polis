@@ -12,6 +12,7 @@ module Decidim
         mimic :organization
 
         attribute :polis_site_id, String
+        attribute :polis_site_url, String
       end
     end
   end

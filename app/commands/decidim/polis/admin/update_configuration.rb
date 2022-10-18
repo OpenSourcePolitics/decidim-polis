@@ -23,6 +23,7 @@ module Decidim
         # Returns nothing.
         def call
           return broadcast(:invalid) if form.invalid?
+
           return broadcast(:ok, @organization) if update_organization
 
           broadcast(:invalid)
@@ -39,7 +40,8 @@ module Decidim
 
         def attributes
           {
-            polis_site_id: form.polis_site_id
+            polis_site_id: form.polis_site_id,
+            polis_site_url: form.polis_site_url
           }
         end
       end

@@ -6,6 +6,7 @@ en:
         area_types: Area types
         areas: Areas
         configuration: Configuration
+        decidim_polis: Pol.is
         help_sections: Help sections
         homepage: Homepage
         scope_types: Scope types
@@ -50,11 +51,11 @@ en:
           login_instructions: Login with your account
           login_title: Contribute to the debate
           moderation:
-            link_1: Comments
-            link_2: Participants
-            link_3: Link 3
-            link_4: Link 4
-            link_5: Link 5
+            comments: Comments
+            participants: Participants
+            stats: Stats
+            exports: Exports
+            reports: Reports
           or: Or
           question_circle_alt: Question circle alt
   layouts:

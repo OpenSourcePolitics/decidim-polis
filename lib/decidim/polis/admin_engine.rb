@@ -28,6 +28,16 @@ module Decidim
         end
       end
 
+      initializer "decidim_polis.configuration_menu" do
+        Decidim.menu :admin_settings_menu do |menu|
+          menu.item I18n.t("decidim.admin.menu.decidim_polis", default: I18n.t("decidim.admin.menu.decidim_polis")),
+                    decidim_admin_polis.organization_configuration_edit_path,
+                    position: 2,
+                    if: allowed_to?(:update, :organization, organization: current_organization),
+                    active: is_active_link?(decidim_admin_polis.organization_configuration_edit_path)
+        end
+      end
+
       def load_seed
         nil
       end

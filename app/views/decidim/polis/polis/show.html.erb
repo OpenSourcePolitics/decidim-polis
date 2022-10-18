@@ -13,14 +13,12 @@
           <ul class="appendModerateLink"></ul>
           </p>
         </div>
-        <% if @admin %>
-          <div class="columns mediumlarge-5 flex">
-            <p class="h-link">
-              <%= t(".data") %>
-            <ul class="appendAdminLink "></ul>
-            </p>
-          </div>
-        <% end %>
+        <div class="columns mediumlarge-5 flex">
+          <p class="h-link">
+            <%= t(".data") %>
+          <ul class="appendAdminLink "></ul>
+          </p>
+        </div>
       </div>
     <% end %>
     <!-- end -->
@@ -57,10 +55,9 @@
           data-auth_needed_to_write="<%= component_settings.social_sign_in_enabled? %>"
           data-xid="<%= current_user.id %>"
           data-x_name="<%= current_user.name %>"
-          data-x_profile_image_url="https://<%= current_organization.host %><%= current_user.avatar %>"
-          style="padding-left:0px;padding-right:0px;">
-        </div>
-        <script async='true' src='https://pol.is/embed.js'></script>
+          data-x_profile_image_url='<%= avatar_url %>'
+            style="padding-left:0px;padding-right:0px;"></div>
+        <script async='true' src='<%= "#{site_url}/embed.js" %>'></script>
       <% else %>
         <div class="well">
           <div class="add-comment">
@@ -71,6 +68,7 @@
                 <%= t(".or") %>
               <% end %>
               <%= link_to t("layouts.decidim.header.sign_in"), decidim.new_user_session_path, class: "sign-in-link" %>
+
             </p>
           </div>
         </div>
@@ -86,7 +84,7 @@
              data-ucsf="1"
              data-ui_lang="<%= locale %>"
              style="padding-left:0px;padding-right:0px;"></div>
-        <script async='true' src='https://pol.is/embed.js'></script>
+        <script async='true' src='<%= "#{site_url}/embed.js" %>'></script>
       <% end %>
     </div>
     <!-- end -->
@@ -151,7 +149,7 @@
     function getConversationId() {
         window.addEventListener('message', function (event) {
             var data = event.data || {};
-            if (!event.origin.match(/pol.is$/)) {
+            if (!event.origin.match(/<%= site_url_for_regex %>$/)) {
                 return;
             }
             var conversationId = data['conversation'].conversation_id;
@@ -160,11 +158,11 @@
     }
 
     function completeUrl(conversation_id) {
-        $('.appendModerateLink').append('<li><a class="btn admin-btn" target="blank" href="https://pol.is/m/' + conversation_id + '/comments"> <%= t(".moderation.link_1") %> </a></li>')
-        $('.appendModerateLink').append('<li><a class="btn admin-btn" target="blank" href="https://pol.is/m/' + conversation_id + '/participants"> <%= t(".moderation.link_2") %> </a></li>')
-        $('.appendAdminLink').append('<li><a class="btn admin-btn" target="blank" href="https://pol.is/m/' + conversation_id + '/stats"> <%= t(".moderation.link_3") %> </a></li>')
-        $('.appendAdminLink').append('<li><a class="btn admin-btn" target="blank" href="https://pol.is/m/' + conversation_id + '/export"> <%= t(".moderation.link_4") %> </a></li>')
-        $('.appendAdminLink').append('<li><a class="btn admin-btn" target="blank" href="https://pol.is/m/' + conversation_id + '/reports"> <%= t(".moderation.link_5") %> </a> </li>')
+        $('.appendModerateLink').append('<li><a class="btn admin-btn" target="blank" href="<%= site_url %>/m/' + conversation_id + '/comments"><%= t(".moderation.comments") %></a></li>')
+        $('.appendModerateLink').append('<li><a class="btn admin-btn" target="blank" href="<%= site_url %>/m/' + conversation_id + '/participants"><%= t(".moderation.participants") %></a></li>')
+        $('.appendAdminLink').append('<li><a class="btn admin-btn" target="blank" href="<%= site_url %>/m/' + conversation_id + '/stats"><%= t(".moderation.stats") %></a></li>')
+        $('.appendAdminLink').append('<li><a class="btn admin-btn" target="blank" href="<%= site_url %>/m/' + conversation_id + '/export"><%= t(".moderation.exports") %></a></li>')
+        $('.appendAdminLink').append('<li><a class="btn admin-btn" target="blank" href="<%= site_url %>/m/' + conversation_id + '/reports"><%= t(".moderation.reports") %></a></li>')
     }
 
     getConversationId()
